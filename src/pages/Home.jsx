@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { ArrowRight, Truck, Timer, Sparkles, Shirt } from 'lucide-react';
+import { ArrowRight, Truck, Timer, Sparkles, Shirt, Clock, MapPin, WashingMachine } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -106,20 +106,18 @@ export default function Home() {
                                     alt="Moagi Laundry Service"
                                     className="w-full h-auto rounded-3xl"
                                 />
-                            </div>
 
-                            {/* Floating Badge - Top Right */}
-                            <motion.div
-                                className="absolute -top-4 -right-4 bg-moagi-lime-500 rounded-full p-6 shadow-2xl"
-                                initial={{ opacity: 0, scale: 0 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.8, type: "spring" }}
-                            >
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-white">24H</div>
-                                    <div className="text-xs font-semibold text-white">Express</div>
-                                </div>
-                            </motion.div>
+                                {/* 24H Express Tag - Top Right */}
+                                <motion.div
+                                    className="absolute top-4 right-4 bg-moagi-lime-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.8, type: "spring" }}
+                                >
+                                    <Timer className="w-4 h-4" />
+                                    <span className="font-bold text-sm">24H Express</span>
+                                </motion.div>
+                            </div>
 
                             {/* Floating Badge - Bottom Left */}
                             <motion.div
@@ -147,6 +145,99 @@ export default function Home() {
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto text-white fill-current">
                         <path fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
+                </div>
+            </section>
+
+            {/* NEW: Self Service Laundry Section */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="bg-gradient-to-br from-moagi-teal-600 to-moagi-teal-700 rounded-3xl p-8 md:p-12 overflow-hidden relative"
+                    >
+                        {/* Background Pattern */}
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+                        <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                            {/* Left Content */}
+                            <div className="lg:w-2/3">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <span className="bg-moagi-lime-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide">
+                                        Layanan Baru
+                                    </span>
+                                </div>
+
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                                    Self Service Laundry
+                                </h2>
+
+                                <p className="text-moagi-teal-100 text-lg md:text-xl mb-6 max-w-2xl">
+                                    Kini hadir layanan <span className="font-semibold text-white">Self Service Laundry</span> di Kalibata Apartment!
+                                    Cuci sendiri dengan mesin modern, hemat waktu dan biaya.
+                                </p>
+
+                                <div className="flex items-center gap-2 text-moagi-teal-100 mb-8">
+                                    <MapPin className="w-5 h-5 text-moagi-lime-400" />
+                                    <span className="font-medium">Kalibata City Apartment, Jakarta Selatan</span>
+                                </div>
+
+                                {/* Features */}
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                                    {[
+                                        { icon: WashingMachine, label: 'Mesin Modern' },
+                                        { icon: Clock, label: 'Buka 24 Jam' },
+                                        { icon: Sparkles, label: 'Bersih & Higienis' },
+                                        { icon: Timer, label: 'Proses Cepat' }
+                                    ].map((feature, idx) => (
+                                        <div key={idx} className="flex items-center gap-2 text-white">
+                                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                                <feature.icon className="w-4 h-4" />
+                                            </div>
+                                            <span className="text-sm font-medium">{feature.label}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* CTA */}
+                                <Link
+                                    to="/layanan"
+                                    className="inline-flex items-center gap-2 bg-white text-moagi-teal-700 font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-moagi-lime-50 transition-all duration-300 transform hover:-translate-y-1"
+                                >
+                                    Lihat Detail Layanan
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
+                            </div>
+
+                            {/* Right Visual */}
+                            <div className="lg:w-1/3 flex justify-center">
+                                <motion.div
+                                    className="relative"
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3, duration: 0.5 }}
+                                >
+                                    <div className="w-48 h-48 md:w-56 md:h-56 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                                        <div className="w-36 h-36 md:w-44 md:h-44 bg-white/20 rounded-full flex items-center justify-center">
+                                            <WashingMachine className="w-20 h-20 md:w-24 md:h-24 text-white" />
+                                        </div>
+                                    </div>
+                                    {/* Floating elements */}
+                                    <motion.div
+                                        className="absolute -top-2 -right-2 bg-moagi-lime-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg"
+                                        animate={{ y: [0, -5, 0] }}
+                                        transition={{ duration: 2, repeat: Infinity }}
+                                    >
+                                        NEW!
+                                    </motion.div>
+                                </motion.div>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
