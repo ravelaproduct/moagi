@@ -32,19 +32,19 @@ export default function Contact() {
 
             <section className="bg-moagi-teal-50 py-16 text-center">
                 <div className="container mx-auto px-4">
-                    <h1 className="text-4xl font-bold text-slate-800 mb-4">Hubungi Kami</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Hubungi Kami</h1>
                     <p className="text-slate-600">
                         Kami siap membantu kebutuhan laundry Anda. Hubungi kami melalui kanal di bawah ini.
                     </p>
                 </div>
             </section>
 
-            <section className="py-20">
+            <section className="py-16 md:py-20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col md:flex-row">
 
                         {/* Contact Info Sidebar */}
-                        <div className="md:w-2/5 bg-moagi-teal-600 p-10 text-white flex flex-col justify-between">
+                        <div className="md:w-2/5 bg-moagi-teal-600 p-6 md:p-10 text-white flex flex-col justify-between">
                             <div>
                                 <h3 className="text-2xl font-bold mb-6">Informasi Kontak</h3>
                                 <p className="text-moagi-teal-100 mb-10 leading-relaxed">
@@ -92,7 +92,7 @@ export default function Contact() {
                         </div>
 
                         {/* Contact Form */}
-                        <div className="md:w-3/5 p-10 md:p-14">
+                        <div className="md:w-3/5 p-6 md:p-14">
                             <h3 className="text-2xl font-bold text-slate-800 mb-2">Kirim Pesan</h3>
                             <p className="text-slate-500 mb-8">Silakan isi form di bawah ini.</p>
 

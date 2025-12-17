@@ -18,17 +18,17 @@ export default function About() {
             </Helmet>
 
             {/* Header */}
-            <section className="bg-moagi-teal-50 py-16 md:py-24">
+            <section className="bg-moagi-teal-50 py-12 md:py-24">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
-                        className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
+                        className="text-3xl md:text-5xl font-bold text-slate-800 mb-4 md:mb-6"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
                         Tentang Moagi Laundry
                     </motion.h1>
                     <motion.p
-                        className="text-lg text-slate-600 max-w-2xl mx-auto"
+                        className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
@@ -39,20 +39,20 @@ export default function About() {
             </section>
 
             {/* Visi Misi */}
-            <section className="py-20">
+            <section className="py-16 md:py-20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto">
                         <motion.div
-                            className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border-t-4 border-moagi-teal-500 text-center"
+                            className="bg-white p-6 md:p-12 rounded-3xl shadow-lg border-t-4 border-moagi-teal-500 text-center"
                             {...fadeUp}
                         >
-                            <div className="flex flex-col items-center gap-4 mb-6">
-                                <div className="p-4 bg-moagi-teal-100 rounded-full text-moagi-teal-600">
-                                    <Eye className="w-10 h-10" />
+                            <div className="flex flex-col items-center gap-4 mb-4 md:mb-6">
+                                <div className="p-3 md:p-4 bg-moagi-teal-100 rounded-full text-moagi-teal-600">
+                                    <Eye className="w-8 h-8 md:w-10 md:h-10" />
                                 </div>
-                                <h2 className="text-3xl font-bold text-slate-800">Visi Kami</h2>
+                                <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Visi Kami</h2>
                             </div>
-                            <p className="text-slate-600 leading-relaxed text-xl">
+                            <p className="text-slate-600 leading-relaxed text-lg md:text-xl">
                                 Menjadi penyedia jasa laundry terdepan yang paling tepercaya, mengutamakan kualitas, inovasi teknologi, dan kepuasan pelanggan di setiap layanannya.
                             </p>
                         </motion.div>
@@ -61,10 +61,10 @@ export default function About() {
             </section>
 
             {/* Sejarah & Timeline */}
-            <section className="py-20 bg-slate-50">
+            <section className="py-16 md:py-20 bg-slate-50">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-slate-800 mb-4">Perjalanan Kami</h2>
+                    <div className="text-center mb-12 md:mb-16">
+                        <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">Perjalanan Kami</h2>
                         <div className="w-20 h-1.5 bg-moagi-teal-500 mx-auto rounded-full" />
                     </div>
 
@@ -127,12 +127,12 @@ export default function About() {
             </section>
 
             {/* Strategi & Keunggulan */}
-            <section className="py-20">
+            <section className="py-16 md:py-20">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-slate-800">Strategi Kami</h2>
+                    <div className="text-center mb-12 md:mb-16">
+                        <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Strategi Kami</h2>
                     </div>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         {[
                             { icon: Clock, title: "Tepat Waktu", desc: "Komitmen pada jadwal pickup & delivery" },
                             { icon: Award, title: "Quality Control", desc: "Pengecekan ganda sebelum dikemas" },
@@ -141,7 +141,7 @@ export default function About() {
                         ].map((item, idx) => (
                             <motion.div
                                 key={idx}
-                                className="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm text-center hover:shadow-md transition-shadow"
+                                className="p-5 md:p-6 bg-white rounded-2xl border border-slate-100 shadow-sm text-center hover:shadow-md transition-shadow"
                                 whileHover={{ y: -5 }}
                             >
                                 <div className="w-12 h-12 mx-auto bg-moagi-teal-50 rounded-full flex items-center justify-center text-moagi-teal-600 mb-4">

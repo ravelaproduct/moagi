@@ -164,7 +164,7 @@ export default function Services() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="bg-gradient-to-r from-sky-500 to-sky-600 rounded-2xl p-6 md:p-8 shadow-lg"
+                        className="bg-gradient-to-r from-moagi-teal-500 to-moagi-teal-600 rounded-2xl p-5 md:p-8 shadow-lg"
                     >
                         <div className="flex items-start gap-4">
                             <div className="flex-shrink-0">
@@ -174,10 +174,10 @@ export default function Services() {
                             </div>
                             <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="bg-yellow-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">New</span>
-                                    <h3 className="text-xl md:text-2xl font-bold text-white">Self Service Laundry</h3>
+                                    <span className="bg-moagi-lime-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">New</span>
+                                    <h3 className="text-lg md:text-2xl font-bold text-white">Self Service Laundry</h3>
                                 </div>
-                                <p className="text-sky-50 text-base md:text-lg">
+                                <p className="text-moagi-teal-50 text-sm md:text-lg">
                                     Sekarang tersedia layanan <span className="font-semibold">Self Service Laundry</span> di <span className="font-semibold">Kalibata Apartment</span>. Cuci sendiri dengan mesin modern dan hemat!
                                 </p>
                             </div>
@@ -192,7 +192,7 @@ export default function Services() {
                         {services.map((service, idx) => (
                             <motion.div
                                 key={service.id}
-                                className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-moagi-teal-200 transition-all duration-300 flex flex-col h-full"
+                                className="bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-moagi-teal-200 transition-all duration-300 flex flex-col h-full"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -229,7 +229,7 @@ export default function Services() {
                     <div className="mt-16">
                         <motion.button
                             onClick={() => setIsPremiumOpen(!isPremiumOpen)}
-                            className="w-full bg-gradient-to-r from-moagi-teal-600 to-moagi-teal-700 rounded-2xl p-6 md:p-8 flex items-center justify-between shadow-lg group hover:shadow-xl transition-all"
+                            className="w-full bg-gradient-to-r from-moagi-teal-600 to-moagi-teal-700 rounded-2xl p-5 md:p-8 flex items-center justify-between shadow-lg group hover:shadow-xl transition-all"
                             whileHover={{ scale: 1.01 }}
                             whileTap={{ scale: 0.99 }}
                         >
@@ -238,8 +238,8 @@ export default function Services() {
                                     <Sparkles className="w-8 h-8" />
                                 </div>
                                 <div>
-                                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">Price List</h2>
-                                    <p className="text-moagi-teal-100 text-sm md:text-base">Daftar lengkap harga layanan spesial kami</p>
+                                    <h2 className="text-xl md:text-3xl font-bold text-white mb-1">Price List</h2>
+                                    <p className="text-moagi-teal-100 text-xs md:text-base">Daftar lengkap harga layanan spesial kami</p>
                                 </div>
                             </div>
                             <motion.div
@@ -267,7 +267,7 @@ export default function Services() {
                                                 <button
                                                     key={category}
                                                     onClick={() => setActiveCategory(category)}
-                                                    className={`flex-1 min-w-[120px] px-4 py-4 font-semibold text-sm md:text-base transition-all ${activeCategory === category
+                                                    className={`flex-1 min-w-[100px] px-3 py-3 md:px-4 md:py-4 font-semibold text-xs md:text-base transition-all ${activeCategory === category
                                                         ? 'bg-white text-moagi-teal-600 border-b-2 border-moagi-teal-600'
                                                         : 'text-slate-600 hover:bg-white/50 hover:text-moagi-teal-600'
                                                         }`}
@@ -301,9 +301,9 @@ export default function Services() {
                     </div>
 
                     {/* CTA Banner inside Services */}
-                    <div className="mt-20 bg-moagi-teal-600 rounded-3xl p-8 md:p-12 text-center text-white">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4">Bingung Pilih Layanan?</h2>
-                        <p className="text-moagi-teal-100 mb-8">Konsultasikan kebutuhan laundry Anda dengan admin kami.</p>
+                    <div className="mt-16 md:mt-20 bg-moagi-teal-600 rounded-3xl p-6 md:p-12 text-center text-white">
+                        <h2 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">Bingung Pilih Layanan?</h2>
+                        <p className="text-moagi-teal-100 mb-6 md:mb-8 text-sm md:text-base">Konsultasikan kebutuhan laundry Anda dengan admin kami.</p>
                         <a
                             href="https://wa.me/6281234567890"
                             target="_blank"
