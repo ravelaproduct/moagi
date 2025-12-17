@@ -41,47 +41,20 @@ export default function About() {
             {/* Visi Misi */}
             <section className="py-20">
                 <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+                    <div className="max-w-3xl mx-auto">
                         <motion.div
-                            className="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-sky-500"
+                            className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border-t-4 border-sky-500 text-center"
                             {...fadeUp}
                         >
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 bg-sky-100 rounded-xl text-sky-600">
-                                    <Eye className="w-8 h-8" />
+                            <div className="flex flex-col items-center gap-4 mb-6">
+                                <div className="p-4 bg-sky-100 rounded-full text-sky-600">
+                                    <Eye className="w-10 h-10" />
                                 </div>
-                                <h2 className="text-2xl font-bold text-slate-800">Visi Kami</h2>
+                                <h2 className="text-3xl font-bold text-slate-800">Visi Kami</h2>
                             </div>
-                            <p className="text-slate-600 leading-relaxed text-lg">
+                            <p className="text-slate-600 leading-relaxed text-xl">
                                 Menjadi penyedia jasa laundry terdepan yang paling tepercaya, mengutamakan kualitas, inovasi teknologi, dan kepuasan pelanggan di setiap layanannya.
                             </p>
-                        </motion.div>
-
-                        <motion.div
-                            className="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-yellow-400"
-                            {...fadeUp}
-                            transition={{ delay: 0.2 }}
-                        >
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 bg-yellow-100 rounded-xl text-yellow-600">
-                                    <Target className="w-8 h-8" />
-                                </div>
-                                <h2 className="text-2xl font-bold text-slate-800">Misi Kami</h2>
-                            </div>
-                            <ul className="space-y-4 text-slate-600">
-                                <li className="flex items-start gap-3">
-                                    <div className="w-2 h-2 mt-2.5 rounded-full bg-yellow-400 flex-shrink-0" />
-                                    <span>Memberikan hasil cucian yang bersih, higienis, dan rapi.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <div className="w-2 h-2 mt-2.5 rounded-full bg-yellow-400 flex-shrink-0" />
-                                    <span>Menyediakan layanan antar-jemput yang tepat waktu.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <div className="w-2 h-2 mt-2.5 rounded-full bg-yellow-400 flex-shrink-0" />
-                                    <span>Menggunakan bahan pembersih ramah lingkungan dan aman untuk pakaian.</span>
-                                </li>
-                            </ul>
                         </motion.div>
                     </div>
                 </div>
