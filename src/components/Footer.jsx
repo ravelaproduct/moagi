@@ -11,7 +11,6 @@ const Footer = () => {
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
                             <img src={Logo} alt="Moagi Laundry" className="h-10 w-auto" />
-                            <span className="font-bold text-lg text-slate-800">Moagi Laundry</span>
                         </div>
                         <p className="text-slate-500 text-sm leading-relaxed">
                             Solusi laundry profesional untuk pakaian bersih, wangi, dan rapi. Melayani dengan hati untuk kepuasan Anda.

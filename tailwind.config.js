@@ -22,7 +22,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Professional font
+        sans: ['Poppins', 'sans-serif'], // Professional font
       }
     },
   },

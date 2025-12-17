@@ -27,7 +27,6 @@ const Navbar = () => {
                     <div className="flex-shrink-0 flex items-center">
                         <Link to="/" className="flex items-center gap-2">
                             <img className="h-12 w-auto" src={Logo} alt="Moagi Laundry" />
-                            <span className="font-bold text-xl text-slate-800 hidden sm:block">Moagi Laundry</span>
                         </Link>
                     </div>
 
@@ -39,8 +38,8 @@ const Navbar = () => {
                                     key={link.name}
                                     to={link.path}
                                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${isActive(link.path)
-                                            ? 'text-sky-600 bg-sky-50'
-                                            : 'text-slate-600 hover:text-sky-500 hover:bg-sky-50/50'
+                                        ? 'text-sky-600 bg-sky-50'
+                                        : 'text-slate-600 hover:text-sky-500 hover:bg-sky-50/50'
                                         }`}
                                 >
                                     {link.name}
@@ -71,8 +70,8 @@ const Navbar = () => {
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
                                 className={`block px-3 py-2 rounded-md text-base font-medium ${isActive(link.path)
-                                        ? 'text-sky-600 bg-sky-50'
-                                        : 'text-slate-600 hover:text-sky-500 hover:bg-sky-50'
+                                    ? 'text-sky-600 bg-sky-50'
+                                    : 'text-slate-600 hover:text-sky-500 hover:bg-sky-50'
                                     }`}
                             >
                                 {link.name}
