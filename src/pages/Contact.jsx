@@ -30,7 +30,7 @@ export default function Contact() {
                 <meta name="description" content="Hubungi kami untuk pemesanan layanan laundry atau pertanyaan lainnya." />
             </Helmet>
 
-            <section className="bg-sky-50 py-16 text-center">
+            <section className="bg-moagi-teal-50 py-16 text-center">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl font-bold text-slate-800 mb-4">Hubungi Kami</h1>
                     <p className="text-slate-600">
@@ -44,42 +44,42 @@ export default function Contact() {
                     <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col md:flex-row">
 
                         {/* Contact Info Sidebar */}
-                        <div className="md:w-2/5 bg-sky-600 p-10 text-white flex flex-col justify-between">
+                        <div className="md:w-2/5 bg-moagi-teal-600 p-10 text-white flex flex-col justify-between">
                             <div>
                                 <h3 className="text-2xl font-bold mb-6">Informasi Kontak</h3>
-                                <p className="text-sky-100 mb-10 leading-relaxed">
+                                <p className="text-moagi-teal-100 mb-10 leading-relaxed">
                                     Punya pertanyaan seputar layanan kami atau ingin complain? Tim kami siap melayani Anda.
                                 </p>
 
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">
-                                        <Phone className="w-6 h-6 text-yellow-300 mt-1" />
+                                        <Phone className="w-6 h-6 text-moagi-lime-400 mt-1" />
                                         <div>
                                             <h4 className="font-semibold text-lg">Telepon / WhatsApp</h4>
-                                            <p className="text-sky-100">+62 812-3456-7890</p>
+                                            <p className="text-moagi-teal-100">+62 812-3456-7890</p>
                                         </div>
                                     </div>
 
                                     <div className="flex items-start gap-4">
-                                        <Mail className="w-6 h-6 text-yellow-300 mt-1" />
+                                        <Mail className="w-6 h-6 text-moagi-lime-400 mt-1" />
                                         <div>
                                             <h4 className="font-semibold text-lg">Email</h4>
-                                            <p className="text-sky-100">hello@moagilaundry.com</p>
+                                            <p className="text-moagi-teal-100">hello@moagilaundry.com</p>
                                         </div>
                                     </div>
 
                                     <div className="flex items-start gap-4">
-                                        <MapPin className="w-6 h-6 text-yellow-300 mt-1" />
+                                        <MapPin className="w-6 h-6 text-moagi-lime-400 mt-1" />
                                         <div>
                                             <h4 className="font-semibold text-lg">Alamat</h4>
-                                            <p className="text-sky-100">Jl. Contoh Kebahagiaan No. 88, Jakarta Selatan</p>
+                                            <p className="text-moagi-teal-100">Jl. Contoh Kebahagiaan No. 88, Jakarta Selatan</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="mt-12">
-                                <h4 className="font-semibold mb-4 text-sky-200">Ikuti Kami</h4>
+                                <h4 className="font-semibold mb-4 text-moagi-teal-200">Ikuti Kami</h4>
                                 <div className="flex gap-4">
                                     <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                                         <Instagram className="w-5 h-5" />
@@ -105,7 +105,7 @@ export default function Contact() {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all"
+                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-moagi-teal-500 focus:ring-2 focus:ring-moagi-teal-200 outline-none transition-all"
                                         placeholder="Masukkan nama anda"
                                         required
                                     />
@@ -119,7 +119,7 @@ export default function Contact() {
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all"
+                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-moagi-teal-500 focus:ring-2 focus:ring-moagi-teal-200 outline-none transition-all"
                                         placeholder="Contoh: 08123456789"
                                         required
                                     />
@@ -133,7 +133,7 @@ export default function Contact() {
                                         value={formData.message}
                                         onChange={handleChange}
                                         rows="4"
-                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all resize-none"
+                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-moagi-teal-500 focus:ring-2 focus:ring-moagi-teal-200 outline-none transition-all resize-none"
                                         placeholder="Tulis pesan anda disini..."
                                         required
                                     ></textarea>
@@ -141,7 +141,7 @@ export default function Contact() {
 
                                 <button
                                     type="submit"
-                                    className="w-full py-4 bg-sky-500 text-white font-bold rounded-xl shadow hover:bg-sky-600 transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center gap-2"
+                                    className="w-full py-4 bg-moagi-teal-500 text-white font-bold rounded-xl shadow hover:bg-moagi-teal-600 transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center gap-2"
                                 >
                                     <Send className="w-5 h-5" />
                                     Kirim Pesan

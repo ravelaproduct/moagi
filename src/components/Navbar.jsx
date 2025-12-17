@@ -40,12 +40,12 @@ const Navbar = () => {
                                     key={link.name}
                                     to={link.path}
                                     className={`relative text-sm font-medium transition-colors duration-300 ${isActive(link.path)
-                                            ? 'text-sky-600'
-                                            : 'text-slate-600 hover:text-sky-600'
+                                        ? 'text-moagi-teal-600'
+                                        : 'text-slate-600 hover:text-moagi-teal-600'
                                         } group`}
                                 >
                                     {link.name}
-                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-sky-600 transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
+                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-moagi-teal-600 transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
                                         }`}></span>
                                 </Link>
                             ))}
@@ -54,7 +54,7 @@ const Navbar = () => {
                         {/* CTA Button */}
                         <Link
                             to="/kontak"
-                            className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg shadow-sky-500/30 hover:shadow-sky-500/40 transform hover:-translate-y-0.5"
+                            className="bg-moagi-teal-500 hover:bg-moagi-teal-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg shadow-moagi-teal-500/30 hover:shadow-moagi-teal-500/40 transform hover:-translate-y-0.5"
                         >
                             Hubungi Kami
                         </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-sky-600 hover:bg-sky-50 focus:outline-none transition-colors"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-moagi-teal-600 hover:bg-moagi-teal-50 focus:outline-none transition-colors"
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </button>
@@ -82,8 +82,8 @@ const Navbar = () => {
                             to={link.path}
                             onClick={() => setIsOpen(false)}
                             className={`block px-3 py-3 rounded-lg text-base font-medium transition-colors ${isActive(link.path)
-                                    ? 'text-sky-600 bg-sky-50'
-                                    : 'text-slate-600 hover:text-sky-600 hover:bg-gray-50'
+                                ? 'text-moagi-teal-600 bg-moagi-teal-50'
+                                : 'text-slate-600 hover:text-moagi-teal-600 hover:bg-gray-50'
                                 }`}
                         >
                             {link.name}
@@ -93,7 +93,7 @@ const Navbar = () => {
                         <Link
                             to="/kontak"
                             onClick={() => setIsOpen(false)}
-                            className="block w-full text-center bg-sky-500 hover:bg-sky-600 text-white px-4 py-3 rounded-xl font-semibold transition-colors shadow-md"
+                            className="block w-full text-center bg-moagi-teal-500 hover:bg-moagi-teal-600 text-white px-4 py-3 rounded-xl font-semibold transition-colors shadow-md"
                         >
                             Hubungi Kami
                         </Link>
