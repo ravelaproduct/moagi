@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shirt, Sparkles, Clock, CheckCircle, ChevronDown, Crown } from 'lucide-react';
+import { Shirt, Sparkles, Clock, CheckCircle, ChevronDown, Crown, Info } from 'lucide-react';
 
 const services = [
     {
@@ -154,6 +154,35 @@ export default function Services() {
                     <p className="text-slate-600 max-w-2xl mx-auto">
                         Pilih layanan yang sesuai dengan kebutuhan pakaian dan barang kesayangan Anda.
                     </p>
+                </div>
+            </section>
+
+            {/* News Announcement Card */}
+            <section className="py-8">
+                <div className="container mx-auto px-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="bg-gradient-to-r from-sky-500 to-sky-600 rounded-2xl p-6 md:p-8 shadow-lg"
+                    >
+                        <div className="flex items-start gap-4">
+                            <div className="flex-shrink-0">
+                                <div className="p-3 bg-white/20 rounded-full">
+                                    <Info className="w-6 h-6 text-white" />
+                                </div>
+                            </div>
+                            <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <span className="bg-yellow-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">New</span>
+                                    <h3 className="text-xl md:text-2xl font-bold text-white">Self Service Laundry</h3>
+                                </div>
+                                <p className="text-sky-50 text-base md:text-lg">
+                                    Sekarang tersedia layanan <span className="font-semibold">Self Service Laundry</span> di <span className="font-semibold">Kalibata Apartment</span>. Cuci sendiri dengan mesin modern dan hemat!
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
