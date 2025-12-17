@@ -9,7 +9,7 @@ export default function Location() {
                 <meta name="description" content="Kunjungi outlet Moagi Laundry terdekat atau cek area layanan antar jemput kami." />
             </Helmet>
 
-            <section className="bg-sky-50 py-16 text-center">
+            <section className="bg-moagi-teal-50 py-16 text-center">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl font-bold text-slate-800 mb-4">Lokasi Kami</h1>
                     <p className="text-slate-600">
@@ -28,7 +28,7 @@ export default function Location() {
 
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">
-                                        <MapPin className="w-6 h-6 text-sky-500 flex-shrink-0 mt-1" />
+                                        <MapPin className="w-6 h-6 text-moagi-teal-500 flex-shrink-0 mt-1" />
                                         <div>
                                             <h3 className="font-semibold text-slate-800">Alamat</h3>
                                             <p className="text-slate-600 leading-relaxed mt-1">
@@ -39,7 +39,7 @@ export default function Location() {
                                     </div>
 
                                     <div className="flex items-start gap-4">
-                                        <Clock className="w-6 h-6 text-sky-500 flex-shrink-0 mt-1" />
+                                        <Clock className="w-6 h-6 text-moagi-teal-500 flex-shrink-0 mt-1" />
                                         <div>
                                             <h3 className="font-semibold text-slate-800">Jam Operasional</h3>
                                             <ul className="text-slate-600 mt-1 space-y-1">
@@ -50,7 +50,7 @@ export default function Location() {
                                     </div>
 
                                     <div className="flex items-start gap-4">
-                                        <Phone className="w-6 h-6 text-sky-500 flex-shrink-0 mt-1" />
+                                        <Phone className="w-6 h-6 text-moagi-teal-500 flex-shrink-0 mt-1" />
                                         <div>
                                             <h3 className="font-semibold text-slate-800">Kontak Outlet</h3>
                                             <p className="text-slate-600 mt-1">+62 812-3456-7890</p>
@@ -63,7 +63,7 @@ export default function Location() {
                                         href="https://goo.gl/maps/example"
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="block w-full text-center bg-sky-50 text-sky-600 font-bold py-3 rounded-xl hover:bg-sky-100 transition-colors"
+                                        className="block w-full text-center bg-moagi-teal-50 text-moagi-teal-600 font-bold py-3 rounded-xl hover:bg-moagi-teal-100 transition-colors"
                                     >
                                         Petunjuk Arah
                                     </a>
@@ -71,9 +71,9 @@ export default function Location() {
                             </div>
 
                             {/* Area Layanan */}
-                            <div className="bg-sky-600 p-8 rounded-2xl shadow-lg text-white">
+                            <div className="bg-moagi-teal-600 p-8 rounded-2xl shadow-lg text-white">
                                 <h3 className="text-xl font-bold mb-4">Area Coverage Antar Jemput</h3>
-                                <p className="text-sky-100 mb-4 text-sm">Gratis antar jemput untuk radius 2km dari outlet.</p>
+                                <p className="text-moagi-teal-100 mb-4 text-sm">Gratis antar jemput untuk radius 2km dari outlet.</p>
                                 <ul className="space-y-2">
                                     <li className="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-white rounded-full"></div> Menteng</li>
                                     <li className="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-white rounded-full"></div> Kuningan</li>

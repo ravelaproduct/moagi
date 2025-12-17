@@ -18,7 +18,7 @@ export default function About() {
             </Helmet>
 
             {/* Header */}
-            <section className="bg-sky-50 py-16 md:py-24">
+            <section className="bg-moagi-teal-50 py-16 md:py-24">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
                         className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
@@ -43,11 +43,11 @@ export default function About() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto">
                         <motion.div
-                            className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border-t-4 border-sky-500 text-center"
+                            className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border-t-4 border-moagi-teal-500 text-center"
                             {...fadeUp}
                         >
                             <div className="flex flex-col items-center gap-4 mb-6">
-                                <div className="p-4 bg-sky-100 rounded-full text-sky-600">
+                                <div className="p-4 bg-moagi-teal-100 rounded-full text-moagi-teal-600">
                                     <Eye className="w-10 h-10" />
                                 </div>
                                 <h2 className="text-3xl font-bold text-slate-800">Visi Kami</h2>
@@ -65,12 +65,12 @@ export default function About() {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-slate-800 mb-4">Perjalanan Kami</h2>
-                        <div className="w-20 h-1.5 bg-sky-500 mx-auto rounded-full" />
+                        <div className="w-20 h-1.5 bg-moagi-teal-500 mx-auto rounded-full" />
                     </div>
 
                     <div className="max-w-3xl mx-auto relative">
                         {/* Vertical Line */}
-                        <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-sky-200 transform -translate-x-1/2 md:translate-x-0 ml-6 md:ml-0" />
+                        <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-moagi-teal-200 transform -translate-x-1/2 md:translate-x-0 ml-6 md:ml-0" />
 
                         {/* Timeline Items */}
                         <div className="space-y-12">
@@ -81,14 +81,14 @@ export default function About() {
                                 viewport={{ once: true }}
                             >
                                 <div className="hidden md:block w-1/2 p-6 text-right">
-                                    <h3 className="text-xl font-bold text-sky-600">2020</h3>
+                                    <h3 className="text-xl font-bold text-moagi-teal-600">2020</h3>
                                     <h4 className="text-lg font-semibold text-slate-800">Awal Berdiri</h4>
                                     <p className="text-slate-500 mt-2">Moagi Laundry didirikan sebagai layanan rumahan sederhana.</p>
                                 </div>
-                                <div className="absolute left-0 md:left-1/2 w-6 h-6 bg-sky-500 rounded-full border-4 border-white shadow-md transform -translate-x-1/2 ml-6 md:ml-0 mt-6 md:mt-2 z-10" />
+                                <div className="absolute left-0 md:left-1/2 w-6 h-6 bg-moagi-teal-500 rounded-full border-4 border-white shadow-md transform -translate-x-1/2 ml-6 md:ml-0 mt-6 md:mt-2 z-10" />
                                 <div className="w-full md:w-1/2 p-6 pl-16 md:pl-12 md:hidden">
                                     {/* Mobile View */}
-                                    <h3 className="text-xl font-bold text-sky-600">2020</h3>
+                                    <h3 className="text-xl font-bold text-moagi-teal-600">2020</h3>
                                     <h4 className="text-lg font-semibold text-slate-800">Awal Berdiri</h4>
                                     <p className="text-slate-500 mt-2">Moagi Laundry didirikan sebagai layanan rumahan sederhana.</p>
                                 </div>
@@ -106,10 +106,10 @@ export default function About() {
 
                                 <div className="hidden md:block w-1/2" /> {/* Spacer */}
 
-                                <div className="absolute left-0 md:left-1/2 w-6 h-6 bg-sky-500 rounded-full border-4 border-white shadow-md transform -translate-x-1/2 ml-6 md:ml-0 mt-6 md:mt-2 z-10" />
+                                <div className="absolute left-0 md:left-1/2 w-6 h-6 bg-moagi-teal-500 rounded-full border-4 border-white shadow-md transform -translate-x-1/2 ml-6 md:ml-0 mt-6 md:mt-2 z-10" />
 
                                 <div className="w-full md:w-1/2 p-6 pl-16 md:pl-12">
-                                    <h3 className="text-xl font-bold text-sky-600">2022</h3>
+                                    <h3 className="text-xl font-bold text-moagi-teal-600">2022</h3>
                                     <h4 className="text-lg font-semibold text-slate-800">Ekspansi Pertama</h4>
                                     <p className="text-slate-500 mt-2">Membuka outlet fisik pertama dan menambah armada antar-jemput.</p>
                                 </div>
@@ -144,7 +144,7 @@ export default function About() {
                                 className="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm text-center hover:shadow-md transition-shadow"
                                 whileHover={{ y: -5 }}
                             >
-                                <div className="w-12 h-12 mx-auto bg-sky-50 rounded-full flex items-center justify-center text-sky-600 mb-4">
+                                <div className="w-12 h-12 mx-auto bg-moagi-teal-50 rounded-full flex items-center justify-center text-moagi-teal-600 mb-4">
                                     <item.icon className="w-6 h-6" />
                                 </div>
                                 <h3 className="font-bold text-slate-800 mb-2">{item.title}</h3>
@@ -171,13 +171,13 @@ function TimelineItem({ year, title, desc, align }) {
             viewport={{ once: true }}
         >
             <div className="hidden md:block w-1/2 p-6 text-right">
-                <h3 className="text-xl font-bold text-sky-600">{year}</h3>
+                <h3 className="text-xl font-bold text-moagi-teal-600">{year}</h3>
                 <h4 className="text-lg font-semibold text-slate-800">{title}</h4>
                 <p className="text-slate-500 mt-2">{desc}</p>
             </div>
-            <div className="absolute left-0 md:left-1/2 w-6 h-6 bg-sky-500 rounded-full border-4 border-white shadow-md transform -translate-x-1/2 ml-6 md:ml-0 mt-6 md:mt-2 z-10" />
+            <div className="absolute left-0 md:left-1/2 w-6 h-6 bg-moagi-teal-500 rounded-full border-4 border-white shadow-md transform -translate-x-1/2 ml-6 md:ml-0 mt-6 md:mt-2 z-10" />
             <div className="w-full md:w-1/2 p-6 pl-16 md:pl-12 md:hidden">
-                <h3 className="text-xl font-bold text-sky-600">{year}</h3>
+                <h3 className="text-xl font-bold text-moagi-teal-600">{year}</h3>
                 <h4 className="text-lg font-semibold text-slate-800">{title}</h4>
                 <p className="text-slate-500 mt-2">{desc}</p>
             </div>

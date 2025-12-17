@@ -148,7 +148,7 @@ export default function Services() {
                 <meta name="description" content="Daftar layanan laundry lengkap: kiloan, satuan, sepatu, bedcover, dan karpet." />
             </Helmet>
 
-            <section className="bg-sky-50 py-16 text-center">
+            <section className="bg-moagi-teal-50 py-16 text-center">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl font-bold text-slate-800 mb-4">Layanan Kami</h1>
                     <p className="text-slate-600 max-w-2xl mx-auto">
@@ -163,25 +163,25 @@ export default function Services() {
                         {services.map((service, idx) => (
                             <motion.div
                                 key={service.id}
-                                className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-sky-200 transition-all duration-300 flex flex-col h-full"
+                                className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:border-moagi-teal-200 transition-all duration-300 flex flex-col h-full"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
                             >
                                 <div className="flex items-center justify-between mb-4">
-                                    <div className="p-3 bg-sky-50 rounded-xl text-sky-600">
+                                    <div className="p-3 bg-moagi-teal-50 rounded-xl text-moagi-teal-600">
                                         <Shirt className="w-6 h-6 " />
                                     </div>
                                     {service.title.includes('Express') && (
-                                        <div className="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full flex items-center gap-1">
+                                        <div className="px-3 py-1 bg-moagi-lime-100 text-moagi-lime-700 text-xs font-bold rounded-full flex items-center gap-1">
                                             <Clock className="w-3 h-3" /> Kilat
                                         </div>
                                     )}
                                 </div>
 
                                 <h3 className="text-xl font-bold text-slate-800 mb-2">{service.title}</h3>
-                                <div className="text-sky-600 font-bold text-lg mb-4">{service.price}</div>
+                                <div className="text-moagi-teal-600 font-bold text-lg mb-4">{service.price}</div>
                                 <p className="text-slate-500 text-sm mb-6 flex-grow">{service.desc}</p>
 
                                 <div className="space-y-3 pt-6 border-t border-slate-100">
@@ -200,7 +200,7 @@ export default function Services() {
                     <div className="mt-16">
                         <motion.button
                             onClick={() => setIsPremiumOpen(!isPremiumOpen)}
-                            className="w-full bg-gradient-to-r from-sky-600 to-sky-700 rounded-2xl p-6 md:p-8 flex items-center justify-between shadow-lg group hover:shadow-xl transition-all"
+                            className="w-full bg-gradient-to-r from-moagi-teal-600 to-moagi-teal-700 rounded-2xl p-6 md:p-8 flex items-center justify-between shadow-lg group hover:shadow-xl transition-all"
                             whileHover={{ scale: 1.01 }}
                             whileTap={{ scale: 0.99 }}
                         >
@@ -210,7 +210,7 @@ export default function Services() {
                                 </div>
                                 <div>
                                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">Price List</h2>
-                                    <p className="text-sky-100 text-sm md:text-base">Daftar lengkap harga layanan spesial kami</p>
+                                    <p className="text-moagi-teal-100 text-sm md:text-base">Daftar lengkap harga layanan spesial kami</p>
                                 </div>
                             </div>
                             <motion.div
@@ -239,8 +239,8 @@ export default function Services() {
                                                     key={category}
                                                     onClick={() => setActiveCategory(category)}
                                                     className={`flex-1 min-w-[120px] px-4 py-4 font-semibold text-sm md:text-base transition-all ${activeCategory === category
-                                                        ? 'bg-white text-sky-600 border-b-2 border-sky-600'
-                                                        : 'text-slate-600 hover:bg-white/50 hover:text-sky-600'
+                                                        ? 'bg-white text-moagi-teal-600 border-b-2 border-moagi-teal-600'
+                                                        : 'text-slate-600 hover:bg-white/50 hover:text-moagi-teal-600'
                                                         }`}
                                                 >
                                                     {category}
@@ -257,10 +257,10 @@ export default function Services() {
                                                         initial={{ opacity: 0, y: 10 }}
                                                         animate={{ opacity: 1, y: 0 }}
                                                         transition={{ delay: idx * 0.02 }}
-                                                        className="flex justify-between items-center p-3 rounded-lg hover:bg-sky-50 transition-colors border border-transparent hover:border-sky-200"
+                                                        className="flex justify-between items-center p-3 rounded-lg hover:bg-moagi-teal-50 transition-colors border border-transparent hover:border-moagi-teal-200"
                                                     >
                                                         <span className="text-slate-700 font-medium text-sm">{item.name}</span>
-                                                        <span className="text-sky-600 font-bold text-sm whitespace-nowrap ml-4">{item.price}</span>
+                                                        <span className="text-moagi-teal-600 font-bold text-sm whitespace-nowrap ml-4">{item.price}</span>
                                                     </motion.div>
                                                 ))}
                                             </div>
@@ -272,14 +272,14 @@ export default function Services() {
                     </div>
 
                     {/* CTA Banner inside Services */}
-                    <div className="mt-20 bg-sky-600 rounded-3xl p-8 md:p-12 text-center text-white">
+                    <div className="mt-20 bg-moagi-teal-600 rounded-3xl p-8 md:p-12 text-center text-white">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">Bingung Pilih Layanan?</h2>
-                        <p className="text-sky-100 mb-8">Konsultasikan kebutuhan laundry Anda dengan admin kami.</p>
+                        <p className="text-moagi-teal-100 mb-8">Konsultasikan kebutuhan laundry Anda dengan admin kami.</p>
                         <a
                             href="https://wa.me/6281234567890"
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center justify-center px-8 py-3 bg-white text-sky-600 font-bold rounded-xl shadow hover:bg-sky-50 transition-colors"
+                            className="inline-flex items-center justify-center px-8 py-3 bg-white text-moagi-teal-600 font-bold rounded-xl shadow hover:bg-moagi-teal-50 transition-colors"
                         >
                             Chat Admin Sekarang
                         </a>

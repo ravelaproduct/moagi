@@ -27,10 +27,10 @@ export default function Home() {
             </Helmet>
 
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-cyan-50 via-white to-blue-50 pt-32 pb-20 lg:pb-32 overflow-hidden">
+            <section className="relative bg-gradient-to-br from-moagi-teal-50 via-white to-moagi-teal-100 pt-32 pb-20 lg:pb-32 overflow-hidden">
                 {/* Background Decorative Elements */}
-                <div className="absolute top-20 right-10 w-72 h-72 bg-yellow-200/30 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"></div>
+                <div className="absolute top-20 right-10 w-72 h-72 bg-moagi-lime-200/30 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 left-10 w-96 h-96 bg-moagi-teal-200/30 rounded-full blur-3xl"></div>
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -43,7 +43,7 @@ export default function Home() {
                         >
                             {/* Badge */}
                             <motion.div
-                                className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 rounded-full bg-yellow-400 text-slate-900 font-bold text-sm shadow-lg"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 mb-8 rounded-full bg-moagi-lime-500 text-white font-bold text-sm shadow-lg"
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
@@ -56,9 +56,9 @@ export default function Home() {
                             <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
                                 Laundry{' '}
                                 <span className="relative inline-block">
-                                    <span className="relative z-10 text-yellow-500">Bersih</span>
+                                    <span className="relative z-10 text-moagi-lime-600">Bersih</span>
                                     <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none">
-                                        <path d="M2 10C60 2 140 2 198 10" stroke="#FCD34D" strokeWidth="4" strokeLinecap="round" />
+                                        <path d="M2 10C60 2 140 2 198 10" stroke="#A6C85A" strokeWidth="4" strokeLinecap="round" />
                                     </svg>
                                 </span>
                                 ,{' '}<br />
@@ -78,14 +78,14 @@ export default function Home() {
                                     href="https://wa.me/6281234567890"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 text-slate-900 font-bold rounded-full shadow-xl hover:bg-yellow-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-lg"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-moagi-lime-500 text-white font-bold rounded-full shadow-xl hover:bg-moagi-lime-600 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-lg"
                                 >
                                     Pesan Sekarang
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </a>
                                 <Link
                                     to="/layanan"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 font-bold rounded-full shadow-lg border-2 border-slate-200 hover:border-cyan-400 hover:bg-cyan-50 transition-all duration-300 text-lg"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-700 font-bold rounded-full shadow-lg border-2 border-slate-200 hover:border-moagi-teal-400 hover:bg-moagi-teal-50 transition-all duration-300 text-lg"
                                 >
                                     Lihat Layanan
                                 </Link>
@@ -110,27 +110,27 @@ export default function Home() {
 
                             {/* Floating Badge - Top Right */}
                             <motion.div
-                                className="absolute -top-4 -right-4 bg-yellow-400 rounded-full p-6 shadow-2xl"
+                                className="absolute -top-4 -right-4 bg-moagi-lime-500 rounded-full p-6 shadow-2xl"
                                 initial={{ opacity: 0, scale: 0 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.8, type: "spring" }}
                             >
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-slate-900">24H</div>
-                                    <div className="text-xs font-semibold text-slate-700">Express</div>
+                                    <div className="text-3xl font-bold text-white">24H</div>
+                                    <div className="text-xs font-semibold text-white">Express</div>
                                 </div>
                             </motion.div>
 
                             {/* Floating Badge - Bottom Left */}
                             <motion.div
-                                className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-2xl border-4 border-cyan-100"
+                                className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-2xl border-4 border-moagi-teal-100"
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 1, type: "spring" }}
                             >
                                 <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
-                                        <Truck className="w-6 h-6 text-cyan-600" />
+                                    <div className="w-12 h-12 bg-moagi-teal-100 rounded-full flex items-center justify-center">
+                                        <Truck className="w-6 h-6 text-moagi-teal-600" />
                                     </div>
                                     <div>
                                         <div className="text-sm font-bold text-slate-900">Antar Jemput</div>
@@ -154,13 +154,13 @@ export default function Home() {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Proses Kami</span>
+                        <span className="text-moagi-teal-600 font-semibold tracking-wider uppercase text-sm">Proses Kami</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mt-2">Cara Kerja Moagi Laundry</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
                         {/* Connecting Line (Desktop Only) */}
-                        <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-sky-100 -z-10 w-full" />
+                        <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-moagi-teal-100 -z-10 w-full" />
 
                         {[
                             { step: '01', title: 'Hubungi Kami', desc: 'Pesan via WhatsApp atau Website' },
@@ -176,7 +176,7 @@ export default function Home() {
                                 viewport={{ once: true }}
                                 variants={fadeInUp}
                             >
-                                <div className="w-16 h-16 mx-auto bg-sky-50 rounded-full flex items-center justify-center text-xl font-bold text-sky-600 mb-6 group-hover:scale-110 transition-transform duration-300 border-4 border-white shadow-sm ring-4 ring-sky-50">
+                                <div className="w-16 h-16 mx-auto bg-moagi-teal-50 rounded-full flex items-center justify-center text-xl font-bold text-moagi-teal-600 mb-6 group-hover:scale-110 transition-transform duration-300 border-4 border-white shadow-sm ring-4 ring-moagi-teal-50">
                                     {item.step}
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-800 mb-2">{item.title}</h3>
@@ -192,10 +192,10 @@ export default function Home() {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                         <div className="max-w-2xl">
-                            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Layanan Unggulan</span>
+                            <span className="text-moagi-teal-600 font-semibold tracking-wider uppercase text-sm">Layanan Unggulan</span>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mt-2">Solusi Mencuci untuk Semua Kebutuhan</h2>
                         </div>
-                        <Link to="/layanan" className="hidden md:flex items-center text-sky-600 font-semibold hover:text-sky-700">
+                        <Link to="/layanan" className="hidden md:flex items-center text-moagi-teal-600 font-semibold hover:text-moagi-teal-700">
                             Lihat Semua Layanan <ArrowRight className="ml-2 w-5 h-5" />
                         </Link>
                     </div>
@@ -215,13 +215,13 @@ export default function Home() {
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
                             >
-                                <div className="w-14 h-14 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6">
-                                    <Sparkles className="w-7 h-7 text-yellow-500" />
+                                <div className="w-14 h-14 bg-moagi-lime-50 rounded-2xl flex items-center justify-center mb-6">
+                                    <Sparkles className="w-7 h-7 text-moagi-lime-600" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-slate-800 mb-2">{service.title}</h3>
-                                <p className="text-sky-600 font-semibold mb-4">{service.price}</p>
+                                <p className="text-moagi-teal-600 font-semibold mb-4">{service.price}</p>
                                 <p className="text-slate-500 mb-6">{service.desc}</p>
-                                <Link to="/layanan" className="text-slate-900 font-medium hover:text-sky-600 inline-flex items-center">
+                                <Link to="/layanan" className="text-slate-900 font-medium hover:text-moagi-teal-600 inline-flex items-center">
                                     Pelajari Lebih Lanjut <ArrowRight className="ml-2 w-4 h-4" />
                                 </Link>
                             </motion.div>
@@ -229,7 +229,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-8 text-center md:hidden">
-                        <Link to="/layanan" className="inline-flex items-center text-sky-600 font-semibold hover:text-sky-700">
+                        <Link to="/layanan" className="inline-flex items-center text-moagi-teal-600 font-semibold hover:text-moagi-teal-700">
                             Lihat Semua Layanan <ArrowRight className="ml-2 w-5 h-5" />
                         </Link>
                     </div>
@@ -239,7 +239,7 @@ export default function Home() {
             {/* CTA Section */}
             <section className="py-20">
                 <div className="container mx-auto px-4">
-                    <div className="bg-sky-600 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden">
+                    <div className="bg-moagi-teal-600 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                             <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                                 <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
@@ -248,12 +248,12 @@ export default function Home() {
 
                         <div className="relative z-10 max-w-3xl mx-auto">
                             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Pakaian Kotor Numpuk? Serahkan pada Kami!</h2>
-                            <p className="text-sky-100 text-lg mb-10">Nikmati waktu luang Anda bersama keluarga, biarkan Moagi Laundry yang mengurus cucian Anda.</p>
+                            <p className="text-moagi-teal-100 text-lg mb-10">Nikmati waktu luang Anda bersama keluarga, biarkan Moagi Laundry yang mengurus cucian Anda.</p>
                             <a
                                 href="https://wa.me/6281234567890"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="inline-flex items-center justify-center px-10 py-5 bg-yellow-300 text-yellow-900 font-bold rounded-xl shadow-lg hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300 text-lg"
+                                className="inline-flex items-center justify-center px-10 py-5 bg-moagi-lime-500 text-white font-bold rounded-xl shadow-lg hover:bg-moagi-lime-600 transform hover:scale-105 transition-all duration-300 text-lg"
                             >
                                 Hubungi Lewat WhatsApp
                                 <ArrowRight className="ml-2 w-6 h-6" />

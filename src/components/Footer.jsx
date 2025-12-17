@@ -21,10 +21,10 @@ const Footer = () => {
                     <div>
                         <h3 className="font-semibold text-slate-800 mb-4">Quick Links</h3>
                         <ul className="space-y-2 text-sm text-slate-500">
-                            <li><Link to="/" className="hover:text-sky-600 transition-colors">Home</Link></li>
-                            <li><Link to="/about" className="hover:text-sky-600 transition-colors">Tentang Kami</Link></li>
-                            <li><Link to="/layanan" className="hover:text-sky-600 transition-colors">Layanan</Link></li>
-                            <li><Link to="/lokasi" className="hover:text-sky-600 transition-colors">Lokasi Outlet</Link></li>
+                            <li><Link to="/" className="hover:text-moagi-teal-600 transition-colors">Home</Link></li>
+                            <li><Link to="/about" className="hover:text-moagi-teal-600 transition-colors">Tentang Kami</Link></li>
+                            <li><Link to="/layanan" className="hover:text-moagi-teal-600 transition-colors">Layanan</Link></li>
+                            <li><Link to="/lokasi" className="hover:text-moagi-teal-600 transition-colors">Lokasi Outlet</Link></li>
                         </ul>
                     </div>
 
@@ -44,15 +44,15 @@ const Footer = () => {
                         <h3 className="font-semibold text-slate-800 mb-4">Hubungi Kami</h3>
                         <ul className="space-y-4 text-sm text-slate-500">
                             <li className="flex items-start gap-3">
-                                <MapPin className="w-5 h-5 text-sky-500 flex-shrink-0" />
+                                <MapPin className="w-5 h-5 text-moagi-teal-500 flex-shrink-0" />
                                 <span>Jl. Contoh No. 123, Jakarta Selatan, DKI Jakarta</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <Phone className="w-5 h-5 text-sky-500 flex-shrink-0" />
+                                <Phone className="w-5 h-5 text-moagi-teal-500 flex-shrink-0" />
                                 <span>+62 812-3456-7890</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <Mail className="w-5 h-5 text-sky-500 flex-shrink-0" />
+                                <Mail className="w-5 h-5 text-moagi-teal-500 flex-shrink-0" />
                                 <span>hello@moagilaundry.com</span>
                             </li>
                         </ul>
@@ -64,7 +64,7 @@ const Footer = () => {
                         © {new Date().getFullYear()} Moagi Laundry. All rights reserved.
                     </p>
                     <div className="flex gap-4">
-                        <a href="#" className="text-slate-400 hover:text-sky-600 transition-colors">
+                        <a href="#" className="text-slate-400 hover:text-moagi-teal-600 transition-colors">
                             <Instagram className="w-5 h-5" />
                         </a>
                         <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors">

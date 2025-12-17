@@ -7,19 +7,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        'moagi-blue': '#AEC6CF', // Pastel Blue (example, fine-tune as needed)
         'moagi-white': '#FFFFFF',
-        'moagi-yellow': '#FDFD96', // Soft Yellow (example)
-        // Alternative pastel palette references directly from common pastel palettes if not specified exactly
-        primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc', // Brand-ish
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          900: '#0c4a6e',
-        }
+        // Moagi Teal - Primary color from logo (#0F6C8C)
+        'moagi-teal': {
+          50: '#e6f4f7',
+          100: '#cce9ef',
+          200: '#99d3df',
+          300: '#66bdcf',
+          400: '#33a7bf',
+          500: '#0F6C8C', // Main logo color
+          600: '#0c5670',
+          700: '#094154',
+          800: '#062b38',
+          900: '#03161c',
+        },
+        // Moagi Lime - Accent color from logo (#A6C85A)
+        'moagi-lime': {
+          50: '#f5f9ed',
+          100: '#ebf3db',
+          200: '#d7e7b7',
+          300: '#c3db93',
+          400: '#afcf6f',
+          500: '#A6C85A', // Main logo color
+          600: '#85a048',
+          700: '#647836',
+          800: '#425024',
+          900: '#212812',
+        },
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'], // Professional font
