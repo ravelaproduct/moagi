@@ -51,7 +51,7 @@ export default function Home() {
                                 <span>Solusi Laundry Profesional</span>
                             </motion.div>
 
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
                                 Laundry Mudah <br />untuk{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-moagi-teal-600 to-moagi-teal-500 relative">
                                     Gaya Hidup
@@ -249,7 +249,7 @@ export default function Home() {
 
                         <div className="lg:w-1/2">
                             <motion.div
-                                className="grid grid-cols-2 gap-4"
+                                className="grid grid-cols-2 gap-4 h-full content-center"
                                 initial="initial"
                                 whileInView="whileInView"
                                 viewport={{ once: true }}
@@ -264,11 +264,11 @@ export default function Home() {
                                     { icon: Shirt, label: 'Hasil Rapih & Memuaskan' },
                                     { icon: Leaf, label: 'Eco Friendly' },
                                 ].map((item, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
-                                        <div className="w-10 h-10 rounded-full bg-moagi-teal-50 flex items-center justify-center text-moagi-teal-600">
+                                    <div key={idx} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition h-full">
+                                        <div className="w-10 h-10 flex-shrink-0 rounded-full bg-moagi-teal-50 flex items-center justify-center text-moagi-teal-600">
                                             <item.icon className="w-5 h-5" />
                                         </div>
-                                        <span className="font-semibold text-slate-700">{item.label}</span>
+                                        <span className="font-semibold text-slate-700 text-sm md:text-base">{item.label}</span>
                                     </div>
                                 ))}
                             </motion.div>
@@ -309,7 +309,7 @@ export default function Home() {
                         ].map((step, idx) => (
                             <motion.div
                                 key={idx}
-                                className="relative p-6 pt-12 border border-slate-200 rounded-3xl"
+                                className="relative p-6 pt-12 border border-slate-200 rounded-3xl h-full flex flex-col"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -319,7 +319,7 @@ export default function Home() {
                                     {step.no}
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-800 mb-4">{step.title}</h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">{step.desc}</p>
+                                <p className="text-sm text-slate-600 leading-relaxed flex-grow">{step.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -407,13 +407,13 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Laundry Harian */}
-                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 h-full flex flex-col">
                             <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
                                 <Shirt className="w-6 h-6 text-moagi-teal-600" />
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-2">Laundry Harian</h3>
                             <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 8.000 / kg</p>
-                            <ul className="space-y-2 text-slate-600 text-sm">
+                            <ul className="space-y-2 text-slate-600 text-sm flex-grow">
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Cuci Setrika</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Cuci Lipat</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Setrika Saja</li>
@@ -422,13 +422,13 @@ export default function Home() {
                         </div>
 
                         {/* Laundry Satuan */}
-                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 h-full flex flex-col">
                             <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
                                 <Star className="w-6 h-6 text-moagi-teal-600" />
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-2">Laundry Satuan</h3>
                             <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 15.000 / pcs</p>
-                            <ul className="space-y-2 text-slate-600 text-sm">
+                            <ul className="space-y-2 text-slate-600 text-sm flex-grow">
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Kaos & Kemeja</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Jas & Dress</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Dan lain-lain</li>
@@ -436,13 +436,13 @@ export default function Home() {
                         </div>
 
                         {/* Linen & Bedding */}
-                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 h-full flex flex-col">
                             <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
                                 <Armchair className="w-6 h-6 text-moagi-teal-600" />
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-2">Linen & Bedding Care</h3>
                             <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 18.000 / pcs</p>
-                            <ul className="space-y-2 text-slate-600 text-sm">
+                            <ul className="space-y-2 text-slate-600 text-sm flex-grow">
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Sprei</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Selimut</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Bed Cover</li>
@@ -450,13 +450,13 @@ export default function Home() {
                         </div>
 
                         {/* Shoes & Bag */}
-                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 h-full flex flex-col">
                             <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
                                 <Sparkles className="w-6 h-6 text-moagi-teal-600" />
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-2">Shoes & Bag Care</h3>
                             <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 55.000 / pair</p>
-                            <ul className="space-y-2 text-slate-600 text-sm">
+                            <ul className="space-y-2 text-slate-600 text-sm flex-grow">
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Sepatu</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Tas</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Topi</li>
@@ -464,13 +464,13 @@ export default function Home() {
                         </div>
 
                         {/* Home & Baby */}
-                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 h-full flex flex-col">
                             <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
                                 <Leaf className="w-6 h-6 text-moagi-teal-600" />
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-2">Home & Baby Care</h3>
                             <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 25.000 / unit</p>
-                            <ul className="space-y-2 text-slate-600 text-sm">
+                            <ul className="space-y-2 text-slate-600 text-sm flex-grow">
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Karpet</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Boneka</li>
                                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Stroller & Dll</li>
