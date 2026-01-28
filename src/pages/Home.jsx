@@ -1,6 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { ArrowRight, Truck, Timer, Sparkles, Shirt, Clock, MapPin, WashingMachine } from 'lucide-react';
+import {
+    ArrowRight, Truck, Timer, Sparkles, Shirt, Clock, MapPin, WashingMachine,
+    Wifi, CreditCard, Droplets, Armchair, ShieldCheck, UserCheck, MessageCircle,
+    Leaf, Search, Phone, Star
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -11,29 +15,21 @@ export default function Home() {
         transition: { duration: 0.6 }
     };
 
-    const stagger = {
-        animate: {
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-
     return (
         <>
             <Helmet>
-                <title>Moagi Laundry - Jasa Laundry Profesional & Terpercaya</title>
-                <meta name="description" content="Jasa laundry terbaik dengan layanan antar jemput. Bersih, wangi, dan rapi untuk kepuasan Anda." />
+                <title>Moagi Laundry - Laundry Mudah untuk Gaya Hidup Serba Cepat</title>
+                <meta name="description" content="Cuci mandiri atau serahkan pada tim profesional kami. Nikmati kemudahan sistem digital dengan hasil dan pengalaman laundry yang memuaskan." />
             </Helmet>
 
-            {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-moagi-teal-50 via-white to-moagi-teal-100 pt-24 md:pt-32 pb-16 lg:pb-24 overflow-hidden">
+            {/* 1. HERO SECTION (ABOVE THE FOLD) */}
+            <section className="relative bg-gradient-to-br from-moagi-teal-50 via-white to-moagi-teal-100 pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
                 {/* Background Decorative Elements */}
                 <div className="absolute top-20 right-10 w-48 md:w-72 h-48 md:h-72 bg-moagi-lime-200/30 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 left-10 w-64 md:w-96 h-64 md:h-96 bg-moagi-teal-200/30 rounded-full blur-3xl"></div>
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                         {/* Left Content */}
                         <motion.div
                             className="lg:w-1/2 text-center lg:text-left"
@@ -41,54 +37,40 @@ export default function Home() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            {/* Badge */}
-                            <motion.div
-                                className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 mb-6 md:mb-8 rounded-full bg-moagi-lime-500 text-white font-bold text-xs md:text-sm shadow-lg"
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 }}
-                            >
-                                <Sparkles className="w-3 h-3 md:w-4 md:h-4" />
-                                Solusi Laundry #1 di Kota Anda
-                            </motion.div>
-
-                            {/* Headline */}
-                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-4 md:mb-6">
-                                Laundry{' '}
-                                <span className="relative inline-block">
-                                    <span className="relative z-10 text-moagi-lime-600">Bersih</span>
-                                    <svg className="absolute -bottom-1 md:-bottom-2 left-0 w-full" height="8" viewBox="0 0 200 12" fill="none">
-                                        <path d="M2 10C60 2 140 2 198 10" stroke="#A6C85A" strokeWidth="4" strokeLinecap="round" />
-                                    </svg>
-                                </span>
-                                ,{' '}<br />
-                                Wangi, dan<br />
-                                Tepat Waktu
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                                Laundry Mudah untuk{' '}
+                                <span className="text-moagi-teal-600">Gaya Hidup Serba Cepat</span>
                             </h1>
 
-                            {/* Description */}
-                            <p className="text-base md:text-lg lg:text-xl text-slate-600 mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                                Layanan laundry profesional dengan sistem pick up & delivery.<br className="hidden md:block" />
-                                Praktis, terpercaya, dan siap melayani setiap hari.
+                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                                Cuci mandiri atau serahkan pada tim profesional kami.<br className="hidden lg:block" />
+                                Nikmati kemudahan sistem digital dengan hasil dan pengalaman laundry yang memuaskan,
+                                melalui proses yang lebih ramah lingkungan.
                             </p>
 
                             {/* CTA Buttons */}
-                            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start flex-wrap">
+                                <Link
+                                    to="/layanan"
+                                    className="inline-flex items-center justify-center px-6 py-3 bg-moagi-lime-500 text-white font-bold rounded-full shadow-lg hover:bg-moagi-lime-600 transition-all duration-300 transform hover:-translate-y-1"
+                                >
+                                    Laundry Self Service
+                                </Link>
+                                <Link
+                                    to="/layanan"
+                                    className="inline-flex items-center justify-center px-6 py-3 bg-moagi-teal-600 text-white font-bold rounded-full shadow-lg hover:bg-moagi-teal-700 transition-all duration-300 transform hover:-translate-y-1"
+                                >
+                                    Laundry Full Service
+                                </Link>
                                 <a
                                     href="https://wa.me/6281234567890"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 bg-moagi-lime-500 text-white font-bold rounded-full shadow-xl hover:bg-moagi-lime-600 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-sm md:text-base"
+                                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-700 font-bold rounded-full shadow-md border-2 border-slate-200 hover:border-moagi-teal-500 hover:text-moagi-teal-600 transition-all duration-300"
                                 >
-                                    Pesan Sekarang
-                                    <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+                                    <Truck className="w-4 h-4 mr-2" />
+                                    Pick Up and Delivery
                                 </a>
-                                <Link
-                                    to="/layanan"
-                                    className="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 bg-white text-slate-700 font-bold rounded-full shadow-lg border-2 border-slate-200 hover:border-moagi-teal-400 hover:bg-moagi-teal-50 transition-all duration-300 text-sm md:text-base"
-                                >
-                                    Lihat Layanan
-                                </Link>
                             </div>
                         </motion.div>
 
@@ -99,260 +81,376 @@ export default function Home() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
                         >
-                            {/* Main Image */}
                             <div className="relative z-10">
                                 <img
                                     src="/model.png"
                                     alt="Moagi Laundry Service"
-                                    className="w-full h-auto rounded-3xl"
+                                    className="w-full h-auto rounded-3xl shadow-2xl"
                                 />
-
-                                {/* 24H Express Tag - Top Right */}
-                                <motion.div
-                                    className="absolute top-4 right-4 bg-moagi-lime-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.8, type: "spring" }}
-                                >
-                                    <Timer className="w-4 h-4" />
-                                    <span className="font-bold text-sm">24H Express</span>
-                                </motion.div>
                             </div>
-
-                            {/* Floating Badge - Bottom Left */}
-                            <motion.div
-                                className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-2xl border-4 border-moagi-teal-100"
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 1, type: "spring" }}
-                            >
-                                <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 bg-moagi-teal-100 rounded-full flex items-center justify-center">
-                                        <Truck className="w-6 h-6 text-moagi-teal-600" />
-                                    </div>
-                                    <div>
-                                        <div className="text-sm font-bold text-slate-900">Antar Jemput</div>
-                                        <div className="text-xs text-slate-500">Gratis Area Tertentu</div>
-                                    </div>
-                                </div>
-                            </motion.div>
                         </motion.div>
                     </div>
                 </div>
-
-                {/* Wave Divider */}
-                <div className="absolute bottom-0 left-0 right-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto text-white fill-current">
-                        <path fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                    </svg>
-                </div>
             </section>
 
-            {/* NEW: Self Service Laundry Section */}
-            <section className="py-12 md:py-16 bg-white">
-                <div className="container mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="bg-gradient-to-br from-moagi-teal-600 to-moagi-teal-700 rounded-3xl p-6 md:p-12 overflow-hidden relative"
-                    >
-                        {/* Background Pattern */}
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+            {/* 2. LAUNDRY SELF SERVICE SECTION */}
+            <section className="py-16 md:py-24 bg-gradient-to-br from-moagi-teal-600 to-moagi-teal-800 text-white relative overflow-hidden">
+                {/* Background Patterns */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-moagi-lime-500/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
-                        <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                            {/* Left Content */}
-                            <div className="lg:w-2/3">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <span className="bg-moagi-lime-500 text-white text-xs font-bold px-3 py-1 md:px-4 md:py-1.5 rounded-full uppercase tracking-wide">
-                                        Layanan Baru
-                                    </span>
-                                </div>
-
-                                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4">
-                                    Self Service Laundry
-                                </h2>
-
-                                <p className="text-moagi-teal-100 text-base md:text-xl mb-4 md:mb-6 max-w-2xl">
-                                    Kini hadir layanan <span className="font-semibold text-white">Self Service Laundry</span> di Kalibata Apartment!
-                                    Cuci sendiri dengan mesin modern, hemat waktu dan biaya.
-                                </p>
-
-                                <div className="flex items-center gap-2 text-moagi-teal-100 mb-6 md:mb-8 text-sm md:text-base">
-                                    <MapPin className="w-4 h-4 md:w-5 md:h-5 text-moagi-lime-400" />
-                                    <span className="font-medium">Kalibata City Apartment, Jakarta Selatan</span>
-                                </div>
-
-                                {/* Features */}
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                                    {[
-                                        { icon: WashingMachine, label: 'Mesin Modern' },
-                                        { icon: Clock, label: 'Buka 24 Jam' },
-                                        { icon: Sparkles, label: 'Bersih & Higienis' },
-                                        { icon: Timer, label: 'Proses Cepat' }
-                                    ].map((feature, idx) => (
-                                        <div key={idx} className="flex items-center gap-2 text-white">
-                                            <div className="w-7 h-7 md:w-8 md:h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                                                <feature.icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                                            </div>
-                                            <span className="text-xs md:text-sm font-medium">{feature.label}</span>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* CTA */}
-                                <Link
-                                    to="/layanan"
-                                    className="inline-flex items-center gap-2 bg-white text-moagi-teal-700 font-bold px-6 py-3 md:px-8 md:py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-moagi-lime-50 transition-all duration-300 transform hover:-translate-y-1 text-sm md:text-base"
-                                >
-                                    Lihat Detail Layanan
-                                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-                                </Link>
-                            </div>
-
-                            {/* Right Visual */}
-                            <div className="lg:w-1/3 flex justify-center">
-                                <motion.div
-                                    className="relative"
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.3, duration: 0.5 }}
-                                >
-                                    <div className="w-48 h-48 md:w-56 md:h-56 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
-                                        <div className="w-36 h-36 md:w-44 md:h-44 bg-white/20 rounded-full flex items-center justify-center">
-                                            <WashingMachine className="w-20 h-20 md:w-24 md:h-24 text-white" />
-                                        </div>
-                                    </div>
-                                    {/* Floating elements */}
-                                    <motion.div
-                                        className="absolute -top-2 -right-2 bg-moagi-lime-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg"
-                                        animate={{ y: [0, -5, 0] }}
-                                        transition={{ duration: 2, repeat: Infinity }}
-                                    >
-                                        NEW!
-                                    </motion.div>
-                                </motion.div>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* How It Works Section */}
-            <section className="py-12 md:py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-10 md:mb-16">
-                        <span className="text-moagi-teal-600 font-semibold tracking-wider uppercase text-xs md:text-sm">Proses Kami</span>
-                        <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mt-2">Cara Kerja Moagi Laundry</h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 relative">
-                        {/* Connecting Line (Desktop Only) */}
-                        <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-moagi-teal-100 -z-10 w-full" />
-
-                        {[
-                            { step: '01', title: 'Hubungi Kami', desc: 'Pesan via WhatsApp atau Website' },
-                            { step: '02', title: 'Pick Up', desc: 'Kurir kami menjemput pakaian kotor' },
-                            { step: '03', title: 'Proses Cuci', desc: 'Dicuci, dikeringkan & disetrika' },
-                            { step: '04', title: 'Delivery', desc: 'Pakaian bersih diantar kembali' }
-                        ].map((item, idx) => (
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                        <div className="lg:w-1/2 order-2 lg:order-1">
                             <motion.div
-                                key={idx}
-                                className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 text-center group"
+                                className="grid grid-cols-2 gap-3 sm:gap-4"
                                 initial="initial"
                                 whileInView="whileInView"
                                 viewport={{ once: true }}
                                 variants={fadeInUp}
                             >
-                                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto bg-moagi-teal-50 rounded-full flex items-center justify-center text-lg md:text-xl font-bold text-moagi-teal-600 mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 border-4 border-white shadow-sm ring-4 ring-moagi-teal-50">
-                                    {item.step}
-                                </div>
-                                <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2">{item.title}</h3>
-                                <p className="text-sm md:text-base text-slate-500">{item.desc}</p>
+                                {[
+                                    { icon: Clock, label: '24 Jam' },
+                                    { icon: CreditCard, label: 'Qris Payment' },
+                                    { icon: Timer, label: 'Proses ± 60 Menit' },
+                                    { icon: Droplets, label: 'Free Detergent' },
+                                    { icon: Wifi, label: 'Akses Wifi' },
+                                    { icon: Armchair, label: 'Lounge' },
+                                    { icon: WashingMachine, label: 'Mesin Terawat' }
+                                ].map((item, idx) => (
+                                    <div
+                                        key={idx}
+                                        className={`bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl hover:bg-white/20 transition-all duration-300 group flex items-center gap-3 ${idx === 6 ? 'col-span-2 sm:col-span-1' : ''}`}
+                                    >
+                                        <div className="w-10 h-10 flex-shrink-0 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-moagi-lime-500 transition-colors duration-300">
+                                            <item.icon className="w-5 h-5 text-moagi-lime-400 group-hover:text-white transition-colors duration-300" />
+                                        </div>
+                                        <span className="font-bold text-sm md:text-base leading-tight">{item.label}</span>
+                                    </div>
+                                ))}
                             </motion.div>
-                        ))}
+                        </div>
+
+                        <motion.div
+                            className="lg:w-1/2 order-1 lg:order-2"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <div className="inline-block px-4 py-1 rounded-full bg-moagi-lime-500/20 text-moagi-lime-400 font-bold uppercase tracking-wider text-xs mb-4 border border-moagi-lime-500/30">
+                                Self Service
+                            </div>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                                Laundry Self Service untuk Gaya Hidup Baru
+                            </h2>
+                            <p className="text-lg text-moagi-teal-50 mb-8 leading-relaxed">
+                                Gaya “me”-laundry baru yang lebih asik dan tetap produktif.<br />
+                                Nikmati pengalaman “me”-laundry dengan mesin yang mudah digunakan, pembayaran yang praktis,
+                                tempat yang nyaman, dan waktu yang lebih fleksibel.
+                            </p>
+
+                            <div className="flex flex-wrap gap-4">
+                                <Link to="/lokasi" className="px-6 py-3 bg-white text-moagi-teal-700 font-bold rounded-xl shadow-lg hover:bg-moagi-lime-50 transition-all transform hover:-translate-y-1">
+                                    Lokasi
+                                </Link>
+                                <Link to="/layanan" className="px-6 py-3 bg-moagi-teal-700 text-white border border-moagi-teal-500 font-bold rounded-xl hover:bg-moagi-teal-600 transition-all transform hover:-translate-y-1">
+                                    Pricelist Self Service
+                                </Link>
+                                <Link to="/layanan" className="px-6 py-3 bg-moagi-teal-700 text-white border border-moagi-teal-500 font-bold rounded-xl hover:bg-moagi-teal-600 transition-all transform hover:-translate-y-1">
+                                    Pembelian Detergent & Parfum
+                                </Link>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
-            </section>
+            </section >
 
-            {/* Services Highlight */}
-            <section className="py-16 md:py-20 bg-slate-50">
+            {/* 3. LAUNDRY FULL SERVICE SECTION */}
+            < section className="py-16 md:py-24 bg-slate-50" >
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-12 gap-4">
-                        <div className="max-w-2xl text-center md:text-left">
-                            <span className="text-moagi-teal-600 font-semibold tracking-wider uppercase text-xs md:text-sm">Layanan Unggulan</span>
-                            <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mt-2">Solusi Mencuci untuk Semua Kebutuhan</h2>
+                    <div className="flex flex-col lg:flex-row items-center gap-12">
+                        <motion.div
+                            className="lg:w-1/2"
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <span className="text-moagi-teal-600 font-bold uppercase tracking-wider text-sm mb-2 block">Full Service</span>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+                                Laundry Full Service untuk Gaya Hidup Praktis dan Bebas Repot
+                            </h2>
+                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                                Percayakan laundry-an mu ke tim profesional kami! <br />
+                                Ditangani secara profesional dengan perhatian penuh pada setiap detail,
+                                menghasilkan laundry yang rapih melalui proses yang lebih ramah lingkungan
+                                tanpa mengorbankan waktu berhargamu.
+                            </p>
+
+                            {/* Social Proof */}
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold text-moagi-teal-600">15.000+</div>
+                                    <div className="text-sm text-slate-500">kg / bulan</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold text-moagi-teal-600">2.700+</div>
+                                    <div className="text-sm text-slate-500">pcs / bulan</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold text-moagi-teal-600">10</div>
+                                    <div className="text-sm text-slate-500">outlets</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold text-moagi-teal-600">15.000+</div>
+                                    <div className="text-sm text-slate-500">customer</div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <div className="lg:w-1/2">
+                            <motion.div
+                                className="grid grid-cols-2 gap-4"
+                                initial="initial"
+                                whileInView="whileInView"
+                                viewport={{ once: true }}
+                                variants={fadeInUp}
+                            >
+                                {[
+                                    { icon: Truck, label: 'Pick Up & Delivery' },
+                                    { icon: MessageCircle, label: 'Fast Respon' },
+                                    { icon: UserCheck, label: 'Tim Profesional' },
+                                    { icon: ShieldCheck, label: 'Garansi Cuci' },
+                                    { icon: Search, label: 'Proses Detail' },
+                                    { icon: Shirt, label: 'Hasil Rapih & Memuaskan' },
+                                    { icon: Leaf, label: 'Eco Friendly' },
+                                ].map((item, idx) => (
+                                    <div key={idx} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                                        <div className="w-10 h-10 rounded-full bg-moagi-teal-50 flex items-center justify-center text-moagi-teal-600">
+                                            <item.icon className="w-5 h-5" />
+                                        </div>
+                                        <span className="font-semibold text-slate-700">{item.label}</span>
+                                    </div>
+                                ))}
+                            </motion.div>
                         </div>
-                        <Link to="/layanan" className="hidden md:flex items-center text-moagi-teal-600 font-semibold hover:text-moagi-teal-700">
-                            Lihat Semua Layanan <ArrowRight className="ml-2 w-5 h-5" />
-                        </Link>
+                    </div>
+                </div>
+            </section >
+
+            {/* 4. HOW WE WORK SECTION */}
+            < section className="py-16 md:py-24 bg-white" >
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Dipercaya Karena Proses, Bukan Sekedar Janji</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { title: 'Cuci Komplit', price: 'Mulai Rp 6.000/kg', desc: 'Cuci bersih, kering, dan setrika rapi. Siap pakai langsung masuk lemari.' },
-                            { title: 'Cuci Bedcover', price: 'Mulai Rp 25.000', desc: 'Perawatan khusus untuk bedcover dan selimut tebal agar tetap lembut.' },
-                            { title: 'Cuci Sepatu', price: 'Mulai Rp 35.000', desc: 'Deep cleaning untuk sepatu kesayangan Anda agar terlihat baru kembali.' }
-                        ].map((service, idx) => (
+                            {
+                                no: "1",
+                                title: "Sorting & Penghitungan yang Teliti",
+                                desc: "Setiap laundry dimulai dengan proses penyortiran dan penghitungan secara menyeluruh. Kami memisahkan pakaian berdasarkan jenis bahan, warna, dan kebutuhan perawatan untuk memastikan setiap item diperlakukan dengan cara yang tepat sejak awal."
+                            },
+                            {
+                                no: "2",
+                                title: "Proses Pencucian & Pengeringan Terstandar",
+                                desc: "Pencucian dan pengeringan dilakukan menggunakan mesin modern dengan pengaturan yang disesuaikan untuk setiap jenis cucian. Kami menggunakan detergen biodegradable dan proses yang lebih ramah lingkungan untuk menjaga kualitas pakaian sekaligus meminimalkan dampak terhadap lingkungan."
+                            },
+                            {
+                                no: "3",
+                                title: "Standar Setrika Rapi & Profesional",
+                                desc: "Setiap pakaian disetrika oleh tim berpengalaman dengan standar kerapihan yang konsisten. Perhatian pada detail memastikan pakaian tidak hanya rapi, tetapi juga nyaman dan siap langsung digunakan."
+                            },
+                            {
+                                no: "4",
+                                title: "Packing Rapi & Wangi Tahan Lama",
+                                desc: "Sebagai tahap akhir, laundry dikemas secara rapi dan higienis dengan aroma eksklusif Moagi Laundry yang segar dan tahan lama— menjaga pakaian tetap bersih, wangi, dan terlindungi hingga sampai ke tangan Anda."
+                            }
+                        ].map((step, idx) => (
                             <motion.div
                                 key={idx}
-                                className="bg-white p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
-                                whileHover={{ y: -5 }}
-                                initial={{ opacity: 0, y: 20 }}
+                                className="relative p-6 pt-12 border border-slate-200 rounded-3xl"
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
                             >
-                                <div className="w-12 h-12 md:w-14 md:h-14 bg-moagi-lime-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6">
-                                    <Sparkles className="w-6 h-6 md:w-7 md:h-7 text-moagi-lime-600" />
+                                <div className="absolute -top-6 left-6 w-12 h-12 bg-moagi-lime-500 text-white text-xl font-bold rounded-full flex items-center justify-center shadow-lg">
+                                    {step.no}
                                 </div>
-                                <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2">{service.title}</h3>
-                                <p className="text-moagi-teal-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">{service.price}</p>
-                                <p className="text-slate-500 mb-4 md:mb-6 text-sm md:text-base">{service.desc}</p>
-                                <Link to="/layanan" className="text-slate-900 font-medium hover:text-moagi-teal-600 inline-flex items-center text-sm md:text-base">
-                                    Pelajari Lebih Lanjut <ArrowRight className="ml-2 w-4 h-4" />
-                                </Link>
+                                <h3 className="text-xl font-bold text-slate-800 mb-4">{step.title}</h3>
+                                <p className="text-sm text-slate-600 leading-relaxed">{step.desc}</p>
                             </motion.div>
                         ))}
                     </div>
+                </div>
+            </section >
 
-                    <div className="mt-8 text-center md:hidden">
-                        <Link to="/layanan" className="inline-flex items-center text-moagi-teal-600 font-semibold hover:text-moagi-teal-700">
-                            Lihat Semua Layanan <ArrowRight className="ml-2 w-5 h-5" />
+            {/* 5. GARANSI KEPUASAN MOAGI LAUNDRY */}
+            < section className="py-16 bg-moagi-teal-600 text-white relative overflow-hidden" >
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div className="container mx-auto px-4 relative z-10 text-center">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur">
+                        <ShieldCheck className="w-8 h-8 text-white" />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">Garansi Kepuasan Moagi Laundry</h2>
+                    <div className="max-w-3xl mx-auto text-lg leading-relaxed space-y-4">
+                        <p>Kami percaya, layanan yang baik adalah layanan yang bertanggung jawab.</p>
+                        <p className="text-moagi-teal-50">
+                            Jika hasil laundry yang Anda terima tidak sesuai dengan standar Moagi Laundry,
+                            kami siap memberikan cuci ulang tanpa biaya atau pengembalian dana,
+                            sesuai ketentuan yang berlaku.
+                        </p>
+                        <p>
+                            Garansi ini kami berikan sebagai bentuk komitmen kami
+                            dalam menjaga kualitas dan kepercayaan pelanggan.
+                        </p>
+                    </div>
+                </div>
+            </section >
+
+            {/* 6. PICK UP & DELIVERY SERVICE */}
+            < section className="py-16 md:py-24 bg-white" >
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row items-center gap-12 bg-slate-50 rounded-[2.5rem] p-8 md:p-12 overflow-hidden">
+                        <div className="md:w-1/2">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Laundry Beres Tanpa Harus Keluar Rumah</h2>
+                            <p className="text-slate-600 mb-8">
+                                Kami menyediakan layanan Pick Up & Delivery Laundry untuk memudahkanmu mencuci tanpa harus datang ke outlet.
+                                Laundry dijemput langsung ke lokasimu dan diantar kembali dalam kondisi rapi, wangi, dan siap digunakan.
+                            </p>
+
+                            <div className="space-y-4 mb-8">
+                                {[
+                                    "Hubungi Customer Service kami melalui WhatsApp",
+                                    "Pilih dan konfirmasikan jenis layanan laundry yang dibutuhkan",
+                                    "Lengkapi data diri dan alamat penjemputan",
+                                    "Driver kami akan menjemput laundry Anda sesuai jadwal yang disepakati"
+                                ].map((step, idx) => (
+                                    <div key={idx} className="flex gap-4">
+                                        <div className="flex-shrink-0 w-8 h-8 bg-moagi-teal-100 rounded-full flex items-center justify-center text-moagi-teal-700 font-bold text-sm">
+                                            {idx + 1}
+                                        </div>
+                                        <p className="text-sm font-medium text-slate-700 pt-1">{step}</p>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <a
+                                href="https://wa.me/6281234567890" target="_blank" rel="noreferrer"
+                                className="inline-flex items-center px-8 py-4 bg-moagi-lime-500 text-white font-bold rounded-xl shadow-lg hover:bg-moagi-lime-600 transition"
+                            >
+                                Order Pick Up & Delivery Laundry
+                            </a>
+                        </div>
+                        <div className="md:w-1/2 flex justify-center">
+                            <div className="relative">
+                                <div className="absolute inset-0 bg-moagi-teal-200 rounded-full blur-3xl opacity-30"></div>
+                                <img src="/delivery-illustration.png" alt="Delivery" className="relative z-10 w-full max-w-md mx-auto"
+                                    onError={(e) => { e.target.onerror = null; e.target.src = '/model.png' }} />
+                                {/* Fallback image if delivery illustration not exists */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section >
+
+            {/* 7. LAYANAN UNGGULAN */}
+            < section className="py-16 md:py-24 bg-white" >
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
+                            Layanan Unggulan<br />
+                            <span className="text-moagi-teal-600">Dari Pakaian Hingga Perlengkapan Rumah</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Laundry Harian */}
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                            <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
+                                <Shirt className="w-6 h-6 text-moagi-teal-600" />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-2">Laundry Harian</h3>
+                            <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 8.000 / kg</p>
+                            <ul className="space-y-2 text-slate-600 text-sm">
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Cuci Setrika</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Cuci Lipat</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Setrika Saja</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Express</li>
+                            </ul>
+                        </div>
+
+                        {/* Laundry Satuan */}
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                            <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
+                                <Star className="w-6 h-6 text-moagi-teal-600" />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-2">Laundry Satuan</h3>
+                            <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 15.000 / pcs</p>
+                            <ul className="space-y-2 text-slate-600 text-sm">
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Kaos & Kemeja</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Jas & Dress</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Dan lain-lain</li>
+                            </ul>
+                        </div>
+
+                        {/* Linen & Bedding */}
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                            <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
+                                <Armchair className="w-6 h-6 text-moagi-teal-600" />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-2">Linen & Bedding Care</h3>
+                            <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 18.000 / pcs</p>
+                            <ul className="space-y-2 text-slate-600 text-sm">
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Sprei</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Selimut</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Bed Cover</li>
+                            </ul>
+                        </div>
+
+                        {/* Shoes & Bag */}
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                            <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
+                                <Sparkles className="w-6 h-6 text-moagi-teal-600" />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-2">Shoes & Bag Care</h3>
+                            <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 55.000 / pair</p>
+                            <ul className="space-y-2 text-slate-600 text-sm">
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Sepatu</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Tas</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Topi</li>
+                            </ul>
+                        </div>
+
+                        {/* Home & Baby */}
+                        <div className="p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition duration-300">
+                            <div className="w-12 h-12 bg-moagi-teal-50 rounded-2xl flex items-center justify-center mb-6">
+                                <Leaf className="w-6 h-6 text-moagi-teal-600" />
+                            </div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-2">Home & Baby Care</h3>
+                            <p className="text-moagi-lime-600 font-bold mb-4">Mulai Rp. 25.000 / unit</p>
+                            <ul className="space-y-2 text-slate-600 text-sm">
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Karpet</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Boneka</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-moagi-teal-300 rounded-full"></div>Stroller & Dll</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="text-center mt-12">
+                        <Link
+                            to="/layanan"
+                            className="inline-flex items-center justify-center px-8 py-4 bg-moagi-teal-600 text-white font-bold rounded-full shadow-lg hover:bg-moagi-teal-700 transition"
+                        >
+                            Lihat Layanan dan Harga
+                            <ArrowRight className="ml-2 w-5 h-5" />
                         </Link>
                     </div>
                 </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-16 md:py-20">
-                <div className="container mx-auto px-4">
-                    <div className="bg-moagi-teal-600 rounded-3xl md:rounded-[2.5rem] p-8 md:p-20 text-center relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                            <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
-                            </svg>
-                        </div>
-
-                        <div className="relative z-10 max-w-3xl mx-auto">
-                            <h2 className="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-6">Pakaian Kotor Numpuk? Serahkan pada Kami!</h2>
-                            <p className="text-moagi-teal-100 text-base md:text-lg mb-8 md:mb-10">Nikmati waktu luang Anda bersama keluarga, biarkan Moagi Laundry yang mengurus cucian Anda.</p>
-                            <a
-                                href="https://wa.me/6281234567890"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 bg-moagi-lime-500 text-white font-bold rounded-xl shadow-lg hover:bg-moagi-lime-600 transform hover:scale-105 transition-all duration-300 text-base md:text-lg"
-                            >
-                                Hubungi Lewat WhatsApp
-                                <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </section >
         </>
     );
 }
