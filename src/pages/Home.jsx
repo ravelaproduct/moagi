@@ -23,7 +23,7 @@ export default function Home() {
             </Helmet>
 
             {/* 1. HERO SECTION (ABOVE THE FOLD) */}
-            <section className="relative pt-28 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-50">
+            <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-slate-50">
                 {/* Dynamic Background */}
                 <div className="absolute top-0 left-0 right-0 h-full overflow-hidden z-0">
                     <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-moagi-teal-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob"></div>
@@ -33,7 +33,7 @@ export default function Home() {
                 </div>
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         {/* Left Content */}
                         <motion.div
                             className="lg:w-1/2 text-center lg:text-left"
@@ -51,7 +51,7 @@ export default function Home() {
                                 <span>Solusi Laundry Profesional</span>
                             </motion.div>
 
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
                                 Laundry Mudah <br />untuk{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-moagi-teal-600 to-moagi-teal-500 relative">
                                     Gaya Hidup
@@ -62,7 +62,7 @@ export default function Home() {
                                 <br />Serba Cepat
                             </h1>
 
-                            <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+                            <p className="text-base md:text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
                                 Cuci mandiri atau serahkan pada tim profesional kami. <br className="hidden lg:block" />
                                 Nikmati kemudahan sistem digital dengan hasil dan pengalaman laundry yang memuaskan,
                                 melalui proses yang lebih ramah lingkungan.

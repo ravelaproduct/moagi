@@ -22,6 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-*.prd_moagi_laundry_company_profile_website.md
-*.Moagi_Laundry_Website_Revamp.pdf
-*.Moagi_Laundry_Context_STRICT.md
+
+# Files
+prd_moagi_laundry_company_profile_website.md
+Moagi_Laundry_Website_Revamp.pdf
+Moagi_Laundry_Context_STRICT.md
