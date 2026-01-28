@@ -11,7 +11,7 @@ export default function Location() {
 
             <section className="bg-moagi-teal-50 py-16 text-center">
                 <div className="container mx-auto px-4">
-                    <h1 className="text-4xl font-bold text-slate-800 mb-4">Lokasi Kami</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Lokasi Kami</h1>
                     <p className="text-slate-600">
                         Temukan outlet Moagi Laundry terdekat dari lokasi Anda.
                     </p>
@@ -23,7 +23,7 @@ export default function Location() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         {/* Info Card */}
                         <div className="lg:col-span-1 space-y-8">
-                            <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-100">
                                 <h2 className="text-2xl font-bold text-slate-800 mb-6 border-b border-slate-100 pb-4">Outlet Pusat</h2>
 
                                 <div className="space-y-6">
@@ -71,7 +71,7 @@ export default function Location() {
                             </div>
 
                             {/* Area Layanan */}
-                            <div className="bg-moagi-teal-600 p-8 rounded-2xl shadow-lg text-white">
+                            <div className="bg-moagi-teal-600 p-6 md:p-8 rounded-2xl shadow-lg text-white">
                                 <h3 className="text-xl font-bold mb-4">Area Coverage Antar Jemput</h3>
                                 <p className="text-moagi-teal-100 mb-4 text-sm">Gratis antar jemput untuk radius 2km dari outlet.</p>
                                 <ul className="space-y-2">
