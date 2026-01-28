@@ -23,7 +23,7 @@ export default function Home() {
             </Helmet>
 
             {/* 1. HERO SECTION (ABOVE THE FOLD) */}
-            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+            <section className="relative pt-28 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-50">
                 {/* Dynamic Background */}
                 <div className="absolute top-0 left-0 right-0 h-full overflow-hidden z-0">
                     <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-moagi-teal-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob"></div>
