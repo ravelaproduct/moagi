@@ -23,13 +23,17 @@ export default function Home() {
             </Helmet>
 
             {/* 1. HERO SECTION (ABOVE THE FOLD) */}
-            <section className="relative bg-gradient-to-br from-moagi-teal-50 via-white to-moagi-teal-100 pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-                {/* Background Decorative Elements */}
-                <div className="absolute top-20 right-10 w-48 md:w-72 h-48 md:h-72 bg-moagi-lime-200/30 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 left-10 w-64 md:w-96 h-64 md:h-96 bg-moagi-teal-200/30 rounded-full blur-3xl"></div>
+            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+                {/* Dynamic Background */}
+                <div className="absolute top-0 left-0 right-0 h-full overflow-hidden z-0">
+                    <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-moagi-teal-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob"></div>
+                    <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-moagi-lime-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob animation-delay-2000"></div>
+                    <div className="absolute bottom-[-20%] right-[20%] w-[500px] h-[500px] bg-sky-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob animation-delay-4000"></div>
+                    <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+                </div>
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                         {/* Left Content */}
                         <motion.div
                             className="lg:w-1/2 text-center lg:text-left"
@@ -37,13 +41,29 @@ export default function Home() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
-                                Laundry Mudah untuk{' '}
-                                <span className="text-moagi-teal-600">Gaya Hidup Serba Cepat</span>
+                            <motion.div
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-moagi-teal-100 shadow-sm mb-6 text-moagi-teal-700 font-semibold text-sm"
+                            >
+                                <Sparkles className="w-4 h-4 text-moagi-lime-500" />
+                                <span>Solusi Laundry Profesional</span>
+                            </motion.div>
+
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
+                                Laundry Mudah <br />untuk{' '}
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-moagi-teal-600 to-moagi-teal-500 relative">
+                                    Gaya Hidup
+                                    <svg className="absolute w-full h-3 -bottom-1 left-0 text-moagi-lime-400 opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
+                                    </svg>
+                                </span>
+                                <br />Serba Cepat
                             </h1>
 
-                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                Cuci mandiri atau serahkan pada tim profesional kami.<br className="hidden lg:block" />
+                            <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+                                Cuci mandiri atau serahkan pada tim profesional kami. <br className="hidden lg:block" />
                                 Nikmati kemudahan sistem digital dengan hasil dan pengalaman laundry yang memuaskan,
                                 melalui proses yang lebih ramah lingkungan.
                             </p>
@@ -52,13 +72,13 @@ export default function Home() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start flex-wrap">
                                 <Link
                                     to="/layanan"
-                                    className="inline-flex items-center justify-center px-6 py-3 bg-moagi-lime-500 text-white font-bold rounded-full shadow-lg hover:bg-moagi-lime-600 transition-all duration-300 transform hover:-translate-y-1"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-moagi-lime-500 to-moagi-lime-400 text-white font-bold rounded-full shadow-lg shadow-moagi-lime-500/30 hover:shadow-moagi-lime-500/50 hover:scale-105 transition-all duration-300"
                                 >
                                     Laundry Self Service
                                 </Link>
                                 <Link
                                     to="/layanan"
-                                    className="inline-flex items-center justify-center px-6 py-3 bg-moagi-teal-600 text-white font-bold rounded-full shadow-lg hover:bg-moagi-teal-700 transition-all duration-300 transform hover:-translate-y-1"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-white text-moagi-teal-700 font-bold rounded-full shadow-md border border-slate-100 hover:border-moagi-teal-500 hover:text-moagi-teal-600 hover:bg-moagi-teal-50 transition-all duration-300"
                                 >
                                     Laundry Full Service
                                 </Link>
@@ -66,9 +86,9 @@ export default function Home() {
                                     href="https://wa.me/6281234567890"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-700 font-bold rounded-full shadow-md border-2 border-slate-200 hover:border-moagi-teal-500 hover:text-moagi-teal-600 transition-all duration-300"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-moagi-teal-700 text-white font-bold rounded-full shadow-xl shadow-moagi-teal-700/20 hover:bg-moagi-teal-800 hover:shadow-moagi-teal-700/40 hover:-translate-y-1 transition-all duration-300"
                                 >
-                                    <Truck className="w-4 h-4 mr-2" />
+                                    <Truck className="w-5 h-5 mr-2" />
                                     Pick Up and Delivery
                                 </a>
                             </div>
@@ -76,17 +96,35 @@ export default function Home() {
 
                         {/* Right Image */}
                         <motion.div
-                            className="lg:w-1/2 relative"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="lg:w-1/2 relative perspective-1000"
+                            initial={{ opacity: 0, scale: 0.9, rotateY: 10 }}
+                            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                            transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <div className="relative z-10">
+                            <div className="relative z-10 w-full max-w-lg mx-auto transform hover:scale-[1.02] transition-transform duration-500">
+                                <div className="absolute inset-0 bg-moagi-teal-500 rounded-[3rem] rotate-3 opacity-20 blur-2xl"></div>
                                 <img
                                     src="/model.png"
                                     alt="Moagi Laundry Service"
-                                    className="w-full h-auto rounded-3xl shadow-2xl"
+                                    className="relative w-full h-auto rounded-[2.5rem] shadow-2xl border-4 border-white/50"
                                 />
+
+                                {/* Floating Badge */}
+                                <motion.div
+                                    className="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-white/50"
+                                    animate={{ y: [0, -10, 0] }}
+                                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 bg-moagi-lime-100 rounded-full flex items-center justify-center">
+                                            <Timer className="w-6 h-6 text-moagi-lime-600" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm text-slate-500 font-medium">Layanan Cepat</p>
+                                            <p className="text-lg font-bold text-slate-800">Tepat Waktu</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
                             </div>
                         </motion.div>
                     </div>
