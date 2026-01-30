@@ -40,11 +40,11 @@ const Navbar = () => {
             >
                 <div className={`
                     w-full max-w-7xl mx-auto 
-                    bg-white/80 backdrop-blur-xl border border-white/50 
-                    shadow-[0_8px_30px_rgb(0,0,0,0.04)]
+                    bg-white/90 backdrop-blur-xl border border-slate-200/60 
+                    shadow-[0_8px_30px_rgb(0,0,0,0.08)]
                     rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5
                     transition-all duration-300
-                    ${scrolled ? 'bg-white/90 shadow-md' : ''}
+                    ${scrolled ? 'bg-white/95 shadow-md' : ''}
                 `}>
                     <div className="flex items-center justify-between">
                         {/* Logo Section */}
@@ -115,7 +115,7 @@ const Navbar = () => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="fixed top-24 left-4 right-4 z-40 md:hidden origin-top"
                     >
-                        <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/50 overflow-hidden">
+                        <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-slate-200/60 overflow-hidden">
                             <div className="px-4 pt-4 pb-6 space-y-2">
                                 {navLinks.map((link) => (
                                     <Link
