@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Clock, Target, Eye, Users, TrendingUp, Award } from 'lucide-react';
+import { Clock, Target, Eye, Users, TrendingUp, Award, Info, Calendar } from 'lucide-react';
 
 export default function About() {
     const fadeUp = {
@@ -20,6 +20,9 @@ export default function About() {
             {/* Header */}
             <section className="bg-moagi-teal-50 py-12 md:py-20">
                 <div className="container mx-auto px-4 text-center">
+                    <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-white border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+                        <Info className="w-3 h-3" /> About Us
+                    </span>
                     <motion.h1
                         className="text-3xl md:text-5xl font-bold text-slate-800 mb-4 md:mb-6"
                         initial={{ opacity: 0, y: -20 }}
@@ -50,6 +53,9 @@ export default function About() {
                                 <div className="p-3 md:p-4 bg-moagi-teal-100 rounded-full text-moagi-teal-600">
                                     <Eye className="w-8 h-8 md:w-10 md:h-10" />
                                 </div>
+                                <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-moagi-teal-50 border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider">
+                                    <Target className="w-3 h-3" /> Our Vision
+                                </span>
                                 <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Visi Kami</h2>
                             </div>
                             <p className="text-slate-600 leading-relaxed text-lg md:text-xl">
@@ -64,6 +70,9 @@ export default function About() {
             <section className="py-12 md:py-20 bg-slate-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12 md:mb-16">
+                        <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-white border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4">
+                            <Calendar className="w-3 h-3" /> History
+                        </span>
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">Perjalanan Kami</h2>
                         <div className="w-20 h-1.5 bg-moagi-teal-500 mx-auto rounded-full" />
                     </div>
@@ -130,6 +139,9 @@ export default function About() {
             <section className="py-12 md:py-20">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12 md:mb-16">
+                        <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-moagi-teal-50 border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4">
+                            <TrendingUp className="w-3 h-3" /> Our Strategy
+                        </span>
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Strategi Kami</h2>
                     </div>
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">

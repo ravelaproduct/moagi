@@ -150,6 +150,9 @@ export default function Services() {
 
             <section className="bg-moagi-teal-50 py-12 md:py-20 text-center">
                 <div className="container mx-auto px-4">
+                    <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-white border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+                        <Sparkles className="w-3 h-3" /> Our Services
+                    </span>
                     <h1 className="text-4xl font-bold text-slate-800 mb-4">Layanan Kami</h1>
                     <p className="text-slate-600 max-w-2xl mx-auto">
                         Pilih layanan yang sesuai dengan kebutuhan pakaian dan barang kesayangan Anda.

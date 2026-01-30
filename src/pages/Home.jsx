@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
     ArrowRight, Truck, Timer, Sparkles, Shirt, Clock, MapPin, WashingMachine,
     Wifi, CreditCard, Droplets, Armchair, ShieldCheck, UserCheck, MessageCircle,
-    Leaf, Search, Phone, Star
+    Leaf, Search, Phone, Star, Crown, RefreshCcw, Award
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -215,7 +215,9 @@ export default function Home() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-moagi-teal-600 font-bold uppercase tracking-wider text-sm mb-2 block">Full Service</span>
+                            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-moagi-teal-50 border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4">
+                                <Sparkles className="w-3 h-3" /> Full Service
+                            </span>
                             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-6">
                                 Laundry Full Service untuk Gaya Hidup Praktis dan Bebas Repot
                             </h2>
@@ -281,6 +283,9 @@ export default function Home() {
             <section className="py-12 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
+                        <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-moagi-teal-50 border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4">
+                            <RefreshCcw className="w-3 h-3" /> Proses Kami
+                        </span>
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Dipercaya Karena Proses, Bukan Sekedar Janji</h2>
                     </div>
 
@@ -333,6 +338,9 @@ export default function Home() {
                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur">
                         <ShieldCheck className="w-8 h-8 text-white" />
                     </div>
+                    <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold uppercase tracking-wider mb-4">
+                        <Award className="w-3 h-3" /> Jaminan Mutu
+                    </span>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">Garansi Kepuasan Moagi Laundry</h2>
                     <div className="max-w-3xl mx-auto text-lg leading-relaxed space-y-4">
                         <p>Kami percaya, layanan yang baik adalah layanan yang bertanggung jawab.</p>
@@ -354,6 +362,9 @@ export default function Home() {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center gap-12 bg-slate-50 rounded-[2.5rem] p-8 md:p-12 overflow-hidden">
                         <div className="md:w-1/2">
+                            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-moagi-teal-50 border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4">
+                                <Truck className="w-3 h-3" /> Antar Jemput
+                            </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Laundry Beres Tanpa Harus Keluar Rumah</h2>
                             <p className="text-slate-600 mb-8">
                                 Kami menyediakan layanan Pick Up & Delivery Laundry untuk memudahkanmu mencuci tanpa harus datang ke outlet.
@@ -399,6 +410,9 @@ export default function Home() {
             <section className="py-12 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
+                        <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-moagi-teal-50 border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4">
+                            <Crown className="w-3 h-3" /> Layanan Unggulan
+                        </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
                             Layanan Unggulan<br />
                             <span className="text-moagi-teal-600">Dari Pakaian Hingga Perlengkapan Rumah</span>

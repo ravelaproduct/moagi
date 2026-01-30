@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Send, Instagram, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Instagram, Facebook, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -32,6 +32,9 @@ export default function Contact() {
 
             <section className="bg-moagi-teal-50 py-12 md:py-20 text-center">
                 <div className="container mx-auto px-4">
+                    <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-white border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+                        <MessageCircle className="w-3 h-3" /> Get In Touch
+                    </span>
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Hubungi Kami</h1>
                     <p className="text-slate-600">
                         Kami siap membantu kebutuhan laundry Anda. Hubungi kami melalui kanal di bawah ini.
