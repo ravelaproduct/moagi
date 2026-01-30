@@ -18,7 +18,7 @@ export default function About() {
             </Helmet>
 
             {/* Header */}
-            <section className="py-12 md:py-20">
+            <section className="pt-28 pb-12 md:pt-32 md:pb-20">
                 <div className="container mx-auto px-4 text-center">
                     <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-white border border-moagi-teal-100 text-moagi-teal-600 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
                         <Info className="w-3 h-3" /> About Us
