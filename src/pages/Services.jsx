@@ -148,7 +148,7 @@ export default function Services() {
                 <meta name="description" content="Daftar layanan laundry lengkap: kiloan, satuan, sepatu, bedcover, dan karpet." />
             </Helmet>
 
-            <section className="bg-moagi-teal-50 py-16 text-center">
+            <section className="bg-moagi-teal-50 py-12 md:py-20 text-center">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl font-bold text-slate-800 mb-4">Layanan Kami</h1>
                     <p className="text-slate-600 max-w-2xl mx-auto">

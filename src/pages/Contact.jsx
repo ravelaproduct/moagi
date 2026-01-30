@@ -30,7 +30,7 @@ export default function Contact() {
                 <meta name="description" content="Hubungi kami untuk pemesanan layanan laundry atau pertanyaan lainnya." />
             </Helmet>
 
-            <section className="bg-moagi-teal-50 py-16 text-center">
+            <section className="bg-moagi-teal-50 py-12 md:py-20 text-center">
                 <div className="container mx-auto px-4">
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Hubungi Kami</h1>
                     <p className="text-slate-600">
@@ -39,7 +39,7 @@ export default function Contact() {
                 </div>
             </section>
 
-            <section className="py-16 md:py-20">
+            <section className="py-12 md:py-20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col md:flex-row">
 

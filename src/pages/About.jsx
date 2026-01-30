@@ -18,7 +18,7 @@ export default function About() {
             </Helmet>
 
             {/* Header */}
-            <section className="bg-moagi-teal-50 py-12 md:py-24">
+            <section className="bg-moagi-teal-50 py-12 md:py-20">
                 <div className="container mx-auto px-4 text-center">
                     <motion.h1
                         className="text-3xl md:text-5xl font-bold text-slate-800 mb-4 md:mb-6"
@@ -39,7 +39,7 @@ export default function About() {
             </section>
 
             {/* Visi Misi */}
-            <section className="py-16 md:py-20">
+            <section className="py-12 md:py-20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto">
                         <motion.div
@@ -61,7 +61,7 @@ export default function About() {
             </section>
 
             {/* Sejarah & Timeline */}
-            <section className="py-16 md:py-20 bg-slate-50">
+            <section className="py-12 md:py-20 bg-slate-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12 md:mb-16">
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">Perjalanan Kami</h2>
@@ -127,7 +127,7 @@ export default function About() {
             </section>
 
             {/* Strategi & Keunggulan */}
-            <section className="py-16 md:py-20">
+            <section className="py-12 md:py-20">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12 md:mb-16">
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Strategi Kami</h2>

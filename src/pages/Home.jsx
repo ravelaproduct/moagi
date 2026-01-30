@@ -23,7 +23,7 @@ export default function Home() {
             </Helmet>
 
             {/* 1. HERO SECTION (ABOVE THE FOLD) */}
-            <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-slate-50">
+            <section className="relative pt-24 pb-12 lg:pt-28 lg:pb-20 overflow-hidden bg-slate-50">
                 {/* Dynamic Background */}
                 <div className="absolute top-0 left-0 right-0 h-full overflow-hidden z-0">
                     <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-moagi-teal-200/40 rounded-full blur-[100px] mix-blend-multiply opacity-70 animate-blob"></div>
@@ -51,7 +51,7 @@ export default function Home() {
                                 <span>Solusi Laundry Profesional</span>
                             </motion.div>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6 tracking-tight">
                                 Laundry Mudah <br />untuk{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-moagi-teal-600 to-moagi-teal-500 relative">
                                     Gaya Hidup
@@ -132,7 +132,7 @@ export default function Home() {
             </section>
 
             {/* 2. LAUNDRY SELF SERVICE SECTION */}
-            <section className="py-16 md:py-24 bg-gradient-to-br from-moagi-teal-600 to-moagi-teal-800 text-white relative overflow-hidden">
+            <section className="py-12 md:py-20 bg-gradient-to-br from-moagi-teal-600 to-moagi-teal-800 text-white relative overflow-hidden">
                 {/* Background Patterns */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-moagi-lime-500/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -179,7 +179,7 @@ export default function Home() {
                             <div className="inline-block px-4 py-1 rounded-full bg-moagi-lime-500/20 text-moagi-lime-400 font-bold uppercase tracking-wider text-xs mb-4 border border-moagi-lime-500/30">
                                 Self Service
                             </div>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                                 Laundry Self Service untuk Gaya Hidup Baru
                             </h2>
                             <p className="text-lg text-moagi-teal-50 mb-8 leading-relaxed">
@@ -205,7 +205,7 @@ export default function Home() {
             </section >
 
             {/* 3. LAUNDRY FULL SERVICE SECTION */}
-            < section className="py-16 md:py-24 bg-slate-50" >
+            <section className="py-12 md:py-20 bg-slate-50">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
                         <motion.div
@@ -216,7 +216,7 @@ export default function Home() {
                             transition={{ duration: 0.8 }}
                         >
                             <span className="text-moagi-teal-600 font-bold uppercase tracking-wider text-sm mb-2 block">Full Service</span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-6">
                                 Laundry Full Service untuk Gaya Hidup Praktis dan Bebas Repot
                             </h2>
                             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -278,10 +278,10 @@ export default function Home() {
             </section >
 
             {/* 4. HOW WE WORK SECTION */}
-            < section className="py-16 md:py-24 bg-white" >
+            <section className="py-12 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Dipercaya Karena Proses, Bukan Sekedar Janji</h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Dipercaya Karena Proses, Bukan Sekedar Janji</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -327,7 +327,7 @@ export default function Home() {
             </section >
 
             {/* 5. GARANSI KEPUASAN MOAGI LAUNDRY */}
-            < section className="py-16 bg-moagi-teal-600 text-white relative overflow-hidden" >
+            <section className="py-12 md:py-16 bg-moagi-teal-600 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur">
@@ -350,7 +350,7 @@ export default function Home() {
             </section >
 
             {/* 6. PICK UP & DELIVERY SERVICE */}
-            < section className="py-16 md:py-24 bg-white" >
+            <section className="py-12 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center gap-12 bg-slate-50 rounded-[2.5rem] p-8 md:p-12 overflow-hidden">
                         <div className="md:w-1/2">
@@ -396,7 +396,7 @@ export default function Home() {
             </section >
 
             {/* 7. LAYANAN UNGGULAN */}
-            < section className="py-16 md:py-24 bg-white" >
+            <section className="py-12 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
